@@ -1,36 +1,39 @@
-
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
-@use '@angular/material' as mat;
-// Plus imports for other components in your app.
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-@include mat.core();
-
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$CV-primary: mat.define-palette(mat.$indigo-palette);
-$CV-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
-
-// The warn palette is optional (defaults to red).
-$CV-warn: mat.define-palette(mat.$red-palette);
-
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
-$CV-theme: mat.define-light-theme((
-  color: (
-    primary: $CV-primary,
-    accent: $CV-accent,
-    warn: $CV-warn,
-  )
-));
-
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include mat.all-component-themes($CV-theme);
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
 
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100% !important }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  overflow-x: hidden;
+}
+
+// TODO remove once style theme is properly done: Anleitung dafür: https://angularindepth.com/posts/1320/custom-theme-for-angular-material-components-series-part-1-create-a-theme
+:root {
+  --color-grey-dark-1: #363C43;
+  --color-grey-dark-2: #747474;
+  --color-grey-medium-1: #CACACA;
+  --color-white-darker: #E9E8E7;
+
+  --text-font-size: 2.1vh;
+  --text-color: var(--color-grey-dark-2);
+  --heading-color: var(--color-grey-dark-1);
+
+  .text-color-grey-dark-1 { color: var(--color-grey-dark-1); }
+  .text-color-grey-dark-2 { color: var(--color-grey-dark-2); }
+  .text-color-grey-medium-1 { color: var(--color-grey-medium-1); }
+  .color-white-darker { color: var(--color-white-darker); }
+
+  --vhw: calc(vh * vw);
+}
+
+.text {
+  color: var(--color-grey-dark-2);
+  font-size: var(--text-font-size);
+  font-weight: 50;
+  text-align: justify;
+  line-height: 3.2vh;
+}

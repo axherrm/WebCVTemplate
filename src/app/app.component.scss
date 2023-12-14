@@ -1,0 +1,36 @@
+#main-background {
+
+}
+#main-heading {
+  font-size: 13vh;
+  color: #ffffff;
+  letter-spacing: 3vh;
+  font-weight: 10;
+  font-family: Copperplate, serif;
+  margin-bottom: 3vh;
+}
+#main-subheading {
+  @extend #main-heading;
+  font-size: 3vh;
+  letter-spacing: 1vh;
+  font-style: italic;
+  transform: translateX(-20vw);
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 3px solid #a1a1a1;
+  display: inline-block;
+}
+
+:host ::ng-deep {
+  .p-card.p-component {
+    //background: black;
+  }
+  .p-card-content {
+    padding: 0;
+  }
+}
