@@ -39,8 +39,10 @@ export class DataService {
     lang = navigator.language;
     if (lang) {
       lang = lang.trim().split("-")[0];
-      this.setLang(lang);
-      return;
+      if (this.loadedLanguages.includes(lang)) {
+        this.setLang(lang);
+        return;
+      }
     }
     this.setLang(this.defaultLang);
   }
