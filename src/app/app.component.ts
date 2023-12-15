@@ -8,7 +8,6 @@ import gsap from 'gsap';
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import {DataService} from "./data/data.service";
 import {SpeedDialModule} from "primeng/speeddial";
-import "flag-icons/css/flag-icons.min.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
