@@ -1,0 +1,18 @@
+{
+  "languages": ["de", "en"],
+  "defaultLanguage": "en",
+  "de": {
+    "id": "de",
+    "name": "Deutsch",
+    "isoAlpha2": "de",
+    "education": "Bildungsweg",
+    "experience": "Erfahrung"
+  },
+  "en": {
+    "id": "en",
+    "name": "English",
+    "isoAlpha2": "us",
+    "education": "Education",
+    "experience": "Experience"
+  }
+}

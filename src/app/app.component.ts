@@ -1,35 +1,56 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 import {CommonModule, NgOptimizedImage} from '@angular/common';
-import { TimelineModule } from 'primeng/timeline';
+import {TimelineModule} from 'primeng/timeline';
 import {CardModule} from "primeng/card";
 import {ButtonModule} from "primeng/button";
 import {BadgeModule} from "primeng/badge";
+import gsap from 'gsap';
+import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {DataService} from "./data/data.service";
+import {SpeedDialModule} from "primeng/speeddial";
+import "flag-icons/css/flag-icons.min.css";
 
-
-interface EducationItem {
-  heading: string;
-  subheading: string;
-  date: string;
-  content: string;
-  bulletPoints?: string[];
-}
+gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, NgOptimizedImage, TimelineModule, CardModule, ButtonModule, BadgeModule],
+  imports: [CommonModule, NgOptimizedImage, TimelineModule, CardModule, ButtonModule, BadgeModule, SpeedDialModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
 
-  education: EducationItem[];
+  @ViewChild("background") background: ElementRef;
+  @ViewChild("education_card") educationCard: ElementRef;
+  @ViewChild("lang_selector") langSelector: ElementRef;
 
-  constructor() {
-    this.education = [
-      { heading: 'Grundschule', subheading: 'Berkenschule Holzgerlingen', date: '09/2008-07/2012', content: "In der Grundschule hatte ich zwar noch keine Berührungen mit Informatik oder technischen Themen, doch Mathe hat sich schenll als mein Lieblingsfach herausgestellt." },
-      { heading: 'Allgemeine Hochschulreife', subheading: 'Schönbuch-Gymnasium Holzgerlingen', date: '09/2012-07/2020', bulletPoints: ["Abschlussnote: 1,4"], content: "Neben der allgemeinen Bildung habe ich hier meine ersten Erfahrungen in der Informatik sammeln können. Ab der Oberstufe habe ich Informatikunterricht besucht." },
-      { heading: 'Software Engineering B.Sc.', subheading: 'Universität Stuttgart', date: '10/2020-04/2023', bulletPoints: ["Voraussichtliche Abschlussnote: 2.0"], content: "In Abgrenzung zum verwandten Studiengang Informatik konnte ich hier einige praktische Erfahrungen mehr sammeln. Diese kleinen Programmierprojekte konnten mich im Studium bisher am meisten begeistern." },
-    ];
+  dataService: DataService;
+
+  constructor(dataService: DataService) {
+    this.dataService = dataService;
+  }
+
+  ngAfterViewInit(): void {
+    const tl: gsap.core.Timeline = gsap.timeline({
+      scrollTrigger: {
+        start: 200,
+        trigger: this.educationCard.nativeElement,
+        end: "+=1000",
+        // markers: true, // TODO remove
+        scrub: true,
+      }
+    });
+    tl
+      .to(this.background.nativeElement, {
+        duration: 50,
+        filter: "blur(2px)"
+      })
+      .from(this.langSelector.nativeElement, {
+        duration: 20,
+        // scaleX: 0,
+        // x: 32,
+        opacity: 0
+      });
   }
 }
