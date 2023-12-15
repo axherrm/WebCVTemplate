@@ -55,7 +55,8 @@
               "src/favicon-16x16.png",
               "src/favicon-32x32.png",
               "src/site.webmanifest",
-              "src/assets"
+              "src/assets",
+              "src/data"
             ],
             "styles": [
               "src/styles.scss",
@@ -116,8 +117,15 @@
             "tsConfig": "tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
+              "src/android-chrome-192x192.png",
+              "src/android-chrome-512x512.png",
+              "src/apple-touch-icon.png",
               "src/favicon.ico",
-              "src/assets"
+              "src/favicon-16x16.png",
+              "src/favicon-32x32.png",
+              "src/site.webmanifest",
+              "src/assets",
+              "src/data"
             ],
             "styles": [
               "src/styles.scss",

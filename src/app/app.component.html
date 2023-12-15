@@ -1,8 +1,12 @@
 <main>
-  <div style="width: 100vw; height: 100vh; display: flex; position: fixed; z-index: -100">
+  <div #background style="width: 100vw; height: 100vh; display: flex; position: fixed; z-index: -100">
     <img ngSrc="./assets/avatar.png" alt="Photo of Axel Herrmann" width="6000" height="3200"
          style="min-width:100vw; min-height:100vh; width: auto; height: auto; object-fit: cover"
     >
+  </div>
+
+  <div #lang_selector style="right: calc(2vh + 64px); top: 2vh; position: fixed; z-index: 1000">
+    <p-speedDial [model]="dataService.languagesMenuItems" direction="down" showIcon="pi pi-language" class="language-speed-dial" [buttonStyle]="{'background': 'rgba(0,0,0,0)', 'border': '1px solid #FFF'}"></p-speedDial>
   </div>
 
   <div style="position:relative; top: -30vh; display: table; height: 130vh; width: 100vw;">
@@ -13,12 +17,12 @@
   </div>
 
   <div style="text-align: center">
-    <p-card [style]="{'width': '80%', 'display': 'inline-block', 'margin-bottom': '5vh'}">
+    <p-card #education_card [style]="{'width': '80%', 'display': 'inline-block', 'margin-bottom': '5vh'}">
       <ng-template pTemplate="content">
-        <h1 style="margin: 0">Bildungsweg</h1>
+        <h1 style="margin: 0">{{ dataService.languagePack.education }}</h1>
       </ng-template>
     </p-card>
-    <p-timeline id="eduction-tl" [value]="education" align="alternate" styleClass="customized-timeline" [style]="{'width': '70%', 'display': 'inline-block'}">
+    <p-timeline id="eduction-tl" [value]="dataService.education" align="alternate" styleClass="customized-timeline" [style]="{'width': '70%', 'display': 'inline-block'}">
       <ng-template pTemplate="marker">
         <span class="dot"></span>
       </ng-template>
@@ -28,7 +32,7 @@
             {{ educationItem.content }}
           </p>
           <div *ngIf="educationItem.bulletPoints">
-            <p-badge *ngFor="let bulletPoint of educationItem.bulletPoints" [value]="bulletPoint" [style]="{'margin': '0 0.3vh'}"></p-badge>
+            <p-badge *ngFor="let bulletPoint of educationItem.bulletPoints" [value]="bulletPoint" [style]="{'margin': '0 0.3vh', 'background': 'rgba(75,85,93,0.7)'}"></p-badge>
           </div>
         </p-card>
       </ng-template>
