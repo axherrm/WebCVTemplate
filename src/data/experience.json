@@ -1,0 +1,54 @@
+{
+  "de": [
+    {
+      "heading": "Teilnahme am #IoT Hackathon",
+      "subheading": "Schönbuch-Gymnasium Holzgerlingen",
+      "date": "2018",
+      "content": "Im Rahmen des Hackathon habe ich das erste Mal etwas praktischere Erfahrungen in der Softwareentwicklung gesammelt."
+    },
+    {
+      "heading": "Entwicklung Verwaltungssoftware SaS",
+      "subheading": "Schönbuch-Gymnasium Holzgerlingen",
+      "date": "2018-2019",
+      "content": "Dank meines Informatik-Lehrers habe ich als einziger Schüler die Möglichkeit bekommen, mit an der Verwaltungssoftware für das Schulprojekt „Schule als Staat“ zu entwickeln. Dabei wurde eine Webseite in PHP realisiert."
+    },
+    {
+      "heading": "Werkstudent Software Developer",
+      "subheading": "levigo solutions, Holzgerlingen",
+      "date": "01/2022-09/2023",
+      "content": "Im Rahmen dieser Anstellung hatte ich das erste Mal die Gelegenheit, professionelle praktische Erfahrungen zu sammeln. Ich habe größtenteils am Backend des Produkts jadice flow gearbeitet. Dabei habe ich viel in Java und SpringBoot, teilweise auch in Java-/Typescript geschrieben. Aufgrund der Microservices-Architektur des Produkts hatte ich viel Erfahrungen mit Docker gesammelt und erste Einblicke in Kubernetes bekommen. Bei dem agilen Vorgehen in 2–3-wöchigen Sprints habe ich das erste Mal mit Scrum gearbeitet."
+    },
+    {
+      "heading": "Bachelor-Thesis",
+      "subheading": "levigo solutions, Holzgerlingen",
+      "date": "09/2023-03/2024",
+      "content": "Insgesamt ein halbes Jahr habe ich bei levigo solutions meine Bachelorthesis über das Thema <i>Refactoring von Microservices- Architekturen: Eine industrielle Fallstudie</i> geschrieben. Dabei habe ich weiter an der Architektur des Produkts jadice flow entwickelt. Die Thesis wird in Zukunft öffentlich zu finden sein."
+    }
+  ],
+  "en": [
+    {
+      "heading": "Participation in the #IoT Hackathon",
+      "subheading": "Schönbuch-Gymnasium Holzgerlingen",
+      "date": "2018",
+      "content": "The hackathon was my first opportunity to gain some practical experience in software development."
+    },
+    {
+      "heading": "Development of management software for SaS",
+      "subheading": "Schönbuch-Gymnasium Holzgerlingen",
+      "date": "2018-2019",
+      "content": "Thanks to my computer science teacher, I was the only pupil given the opportunity to help develop the administration software for the \"Schule als Staat\" school project. This involved creating a website in PHP."
+    },
+    {
+      "heading": "Working student as Software Developer",
+      "subheading": "levigo solutions, Holzgerlingen",
+      "date": "01/2022-09/2023",
+      "content": "This job gave me my first opportunity to gain professional practical experience. I mainly worked on the backend of the jadice flow product. I wrote a lot in Java and SpringBoot, and sometimes also in Java/Typescript. Due to the microservices architecture of the product, I gained a lot of experience with Docker and got my first insights into Kubernetes. I worked with Scrum for the first time in the agile approach in 2-3-week sprints."
+    },
+    {
+      "heading": "Bachelor Thesis",
+      "subheading": "levigo solutions, Holzgerlingen",
+      "date": "09/2023-03/2024",
+      "content": "I spent a total of six months at levigo solutions writing my bachelor's thesis on the topic of <i>Refactoring Microservices Architectures: An Industrial Case Study</i>. I continued to develop the architecture of the jadice flow product. The thesis will be publicly available in the future."
+    }
+  ]
+}

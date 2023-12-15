@@ -6,13 +6,15 @@
     "name": "Deutsch",
     "isoAlpha2": "de",
     "education": "Bildungsweg",
-    "experience": "Erfahrung"
+    "experience": "Erfahrung",
+    "skills": "Kenntnisse"
   },
   "en": {
     "id": "en",
     "name": "English",
     "isoAlpha2": "us",
     "education": "Education",
-    "experience": "Experience"
+    "experience": "Experience",
+    "skills": "skills"
   }
 }

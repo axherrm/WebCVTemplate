@@ -1,7 +1,8 @@
 import {Injectable} from '@angular/core';
 import * as educationJson from '../../data/education.json';
 import * as languagesJson from '../../data/languages.json';
-import {EducationItem, LanguagePack} from "./model";
+import * as experienceJson from '../../data/experience.json';
+import {EducationItem, ExperienceItem, LanguagePack} from "./model";
 import {MenuItem} from "primeng/api";
 
 @Injectable({
@@ -16,6 +17,7 @@ export class DataService {
   lang: string;
   languagePack: LanguagePack;
   education: EducationItem[];
+  experience: ExperienceItem[];
 
   constructor() {
     this.determineLanguage();
@@ -27,6 +29,8 @@ export class DataService {
     this.education = educationJson[this.lang];
     // @ts-ignore
     this.languagePack = languagesJson[this.lang];
+    // @ts-ignore
+    this.experience = experienceJson[this.lang];
     this.fillLanguageButton();
   }
 

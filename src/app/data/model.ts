@@ -1,9 +1,20 @@
-export interface EducationItem {
+export interface TimelineItem {
   heading: string;
   subheading: string;
   date: string;
   content: string;
+}
+
+export interface EducationItem extends TimelineItem {
   bulletPoints?: string[];
+}
+
+export interface ExperienceItem extends TimelineItem {
+  skills?: Skill[];
+}
+
+export interface Skill {
+
 }
 
 export interface LanguagePack {
