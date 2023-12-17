@@ -19,6 +19,8 @@ export class DataService {
   education: EducationItem[];
   experience: ExperienceItem[];
 
+  afterLanguageLoad: () => void = () => {};
+
   constructor() {
     this.determineLanguage();
   }
@@ -32,6 +34,7 @@ export class DataService {
     // @ts-ignore
     this.experience = experienceJson[this.lang];
     this.fillLanguageButton();
+    this.afterLanguageLoad();
   }
 
   determineLanguage(): void {

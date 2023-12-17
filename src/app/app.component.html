@@ -22,6 +22,12 @@
     <p-speedDial [model]="dataService.languagesMenuItems" direction="down" showIcon="pi pi-language" class="language-speed-dial" buttonClassName="language-button"></p-speedDial>
   </div>
 
+  <div #navbar id="navbar">
+    <div style="padding: 2vh 20vw 20vh 20vw;">
+      <p-steps [model]="menuSteps" [readonly]="false" [activeIndex]="stepActive" (activeIndexChange)="onStepChange($event)"></p-steps>
+    </div>
+  </div>
+
   <div style="position:relative; top: -30vh; display: table; height: 130vh; width: 100vw;">
     <div style="display: table-cell; vertical-align: middle; text-align: center;">
       <h1 id="main-heading">Axel Herrmann</h1>
@@ -60,4 +66,7 @@
       </ng-template>
     </p-timeline>
   </div>
+
 </main>
+
+<router-outlet></router-outlet>
