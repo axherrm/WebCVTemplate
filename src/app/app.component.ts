@@ -20,9 +20,9 @@ gsap.registerPlugin(ScrollTrigger);
 })
 export class AppComponent {
 
-  @ViewChild("background") background: ElementRef;
-  @ViewChild("education_card") educationCard: ElementRef;
-  @ViewChild("lang_selector") langSelector: ElementRef;
+  @ViewChild("background", {read: ElementRef}) background: ElementRef;
+  @ViewChild("education_card", {read: ElementRef}) educationCard: ElementRef;
+  @ViewChild("lang_selector", {read: ElementRef}) langSelector: ElementRef;
 
   dataService: DataService;
 
@@ -33,23 +33,20 @@ export class AppComponent {
   ngAfterViewInit(): void {
     const tl: gsap.core.Timeline = gsap.timeline({
       scrollTrigger: {
-        start: 200,
+        start: "top 90%%",
         trigger: this.educationCard.nativeElement,
-        end: "+=1000",
+        end: "top top",
         // markers: true, // TODO remove
         scrub: true,
       }
     });
     tl
       .to(this.background.nativeElement, {
-        duration: 50,
         filter: "blur(2px)"
       })
       .from(this.langSelector.nativeElement, {
-        duration: 20,
-        // scaleX: 0,
-        // x: 32,
-        opacity: 0
-      });
+        opacity: 0,
+        ease: "power1.in"
+      }, "<");
   }
 }

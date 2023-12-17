@@ -30,4 +30,5 @@ export interface LanguagePack {
   isoAlpha2: string;
   education: string;
   experience: string;
+  skills: string;
 }
