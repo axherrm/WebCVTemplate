@@ -1,8 +1,21 @@
 <main>
   <div #background style="width: 100vw; height: 100vh; display: flex; position: fixed; z-index: -100">
-    <img ngSrc="./assets/avatar.png" alt="Photo of Axel Herrmann" width="6000" height="3200"
-         style="min-width:100vw; min-height:100vh; width: auto; height: auto; object-fit: cover"
-    >
+<!--    <img-->
+<!--      srcset= "../assets/avatar_600.png 600w,-->
+<!--               ../assets/avatar_1000x533.png 1000w,-->
+<!--               ../assets/avatar_1500x800.png 1500w,-->
+<!--               ../assets/avatar_2000x1066.png 2000w,-->
+<!--               ../assets/avatar_2500x1333.png 2500w,-->
+<!--               ../assets/avatar_3000x1600.png 3000w,-->
+<!--               ../assets/avatar_6000x3200.png 6000w"-->
+<!--      sizes="100vw"-->
+<!--      src="../assets/avatar_600.png"-->
+<!--      alt=""-->
+<!--      style="min-width:100vw; min-height:100vh; width: auto; height: auto; object-fit: cover;"-->
+<!--    />-->
+    <img width="6000" height="3200"
+      ngSrc="assets/avatar" ngSrcset="600w, 1000w, 1500w, 2000w, 2500w, 3000w, 6000w"
+      alt="" style="min-width:100vw; min-height:100vh; width: auto; height: auto; object-fit: cover;"/>
   </div>
 
   <div #lang_selector style="right: calc(2vh + 64px); top: 2vh; position: fixed; z-index: 1000">
