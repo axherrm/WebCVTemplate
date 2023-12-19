@@ -8,7 +8,7 @@ export const appConfig: ApplicationConfig = {
     {
       provide: IMAGE_LOADER,
       useValue: (config: ImageLoaderConfig) => {
-        return `${location.origin}/${config.src}_${config.width}.png`;
+        return `${config.src}${config.width}.png`;
       }
     }
   ]
