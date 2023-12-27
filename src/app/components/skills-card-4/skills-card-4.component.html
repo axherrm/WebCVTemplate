@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="animation-container" (click)="rotated = !rotated" [class.card-rotated]="rotated">
+    <div class="card-content front">
+      <circle-progress [value]="rating" max="100" text-format="percent"></circle-progress>
+      <div class="skill-title">{{ name }}</div>
+    </div>
+    <div class="card-content back" style="transform: rotateY(-180deg);">
+      <span [innerHTML]="description"></span>
+    </div>
+  </div>
+</div>

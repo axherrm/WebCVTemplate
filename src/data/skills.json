@@ -1,0 +1,269 @@
+{
+  "de": [
+    {
+      "id": "languages",
+      "name": "Sprachen",
+      "description": "Softwareentwicklung ist ein Teamsport, weswegen gute Verständigung wichtig ist. Ich kann sowohl auf Deutsch als auch Englisch arbeiten.",
+      "icon": "pi-language",
+      "skills": [
+        {
+          "id": "german",
+          "name": "Deutsch",
+          "rating": 100,
+          "text": "Deutsch ist meine Muttersprache. Ich kann mich dementsprechend problemlos verständigen und beherrsche eine gute schriftliche Form."
+        },
+        {
+          "id": "english",
+          "name": "Englisch",
+          "rating": 84,
+          "text": "Ich habe Eng&shy;lisch&shy;unter&shy;richt bis zur 10. Klasse be&shy;sucht. Sowohl in meiner Freizeit als auch als Software Entwickler beschäftige ich mich mit fast so vielen englischen Text- und Sprachinhalten wie deutschen. Dadurch bin ich in der Lage, die Sprache textuell und verbal sehr gut zu verstehen und auch gut zu sprechen. Um das bescheinigen zu können, habe ich einen TOEFL iBT Test gemacht und dabei das Sprachlevel C1 nach GER mit 101 von 120 möglichen Punkten erreicht."
+        },
+        {
+          "id": "latin",
+          "name": "Latein",
+          "rating": 50,
+          "text": "Ich habe Latein von der 6. bis zur 12. Klasse gelernt und damit das große Latinum erhalten. Die Sprache hat mir viele Bereiche der deutschen Grammatik verständlicher gemacht, ist für mich aber ansonsten nicht von weiterer Bedeutung."
+        }
+      ]
+    },
+    {
+      "id": "backend",
+      "name": "Backend",
+      "description": "In diesem Bereich habe bisher am meisten gearbeitet",
+      "icon": "pi-server",
+      "skills": [
+        {
+          "id": "java",
+          "name": "Java",
+          "rating": 80,
+          "text": "Den Großteil meiner Erfahrung habe ich mit Java gesammelt. Abgesehen davon, dass es die erste Sprache war, die ich gelernt habe, wurde sie in den meisten meiner Vorlesungen sowie einigen Projektarbeiten in meinem Studiengang verwendet. Außerdem habe ich in meinen 1,5 Jahren als Werkstudent bei levigo solutions hauptsächlich in Java geschrieben und dabei mit Frameworks wie SpringBoot, Apache Camel und anderen gearbeitet. Ich finde mich schnell zurecht, kenne viele Konventionen und Best Practices und nutze die Sprache gerne.",
+          "subSkills": ["SpringBoot", "Apache Camel", "Maven", "Gradle"]
+        },
+        {
+          "id": "python",
+          "name": "Python",
+          "rating": 60,
+          "text": "Meine Erfahrung in Python basiert größtenteils auf einer halbjährigen Projektarbeit meines Studiengangs. Dabei wurde mit 2 Kommilitonen eine Webseite mit dem Framework Flask entwickelt, die im Backend physikalische Berechnungen durchgeführt hat. Durch diese und andere kleinere Erfahrungen habe ich ein grundlegendes Verständis von den Konzepten der Sprache und finde mich darin zurecht.",
+          "subSkills": ["Flask, Jinja"]
+        },
+        {
+          "id": "c++",
+          "name": "C++",
+          "rating": 40,
+          "text": "C++ wurde in einigen meiner Vorlesungen thematisiert, weswegen ich ein grundlegendes Verständis aufbauen konnte. Selbst angewendet habe ich die Sprache außerdem in einem OpenCL Projekt im Rahmen eines Seminars."
+        }
+      ]
+    },
+    {
+      "id": "frontend",
+      "name": "Frontend",
+      "description": "Entwicklung von Web- und Mobilanwendungen",
+      "icon": "pi-mobile",
+      "skills": [
+        {
+          "id": "html-css",
+          "name": "HTML & CSS",
+          "rating": 80,
+          "text": "In einigen kleineren privaten sowie universitären Projekten habe ich gelernt, mit HTML & CSS Webseiten zu gestalten. Da ich diesen Bereich sehr spannend finde, aber durch meine Arbeit im Backend Bereich im Beruf bisher noch nicht damit in Berührung gekommen bin, habe ich einige private Projekte damit angefangen. Diese Webseite ist eins davon."
+        },
+        {
+          "id": "js",
+          "name": "JavaScript",
+          "rating": 80,
+          "text": "In allen Projekten mit HTML & CSS habe ich auch mit JavaScript gearbeitet. Dadurch kenne ich mit üblichen Verwendungen der Sprache im Webseiten-Kontext wie DOM-Manipulation aus. Bei Recherchen habe ich oftmals Code mit jQuery gelesen und ein grundlegendes Verständnis dafür bekommen, die Library allerdings noch nie verwendet."
+        },
+        {
+          "id": "ts",
+          "name": "TypeScript",
+          "rating": 60,
+          "text": "Als jemand, der sich in stark typisierten Sprachen wie Java zuahuse fühlt, ist TypeScript für die präferierte Wahl über JavaScript. Da es auf JavaScript aufbaut, komme ich sehr gut damit zurecht, obwohl ich es noch nicht allzu oft verwendet habe."
+        },
+        {
+          "id": "vue",
+          "name": "Vue.js",
+          "rating": 60,
+          "text": "Erstmals benutzt habe Vue.js im Rahmen einer Vorlesung und eines Projekts im 3. Semester meines Studiums. Mir hat das Entwickeln von SPAs direkt Spaß gemacht."
+        },
+        {
+          "id": "angular",
+          "name": "Angular",
+          "rating": 60,
+          "text": "Schon lange wollte ich nach meiner Erfahrung mit Vue.js mich an das bekanntere und weiter verbreitete SPA-Framework Angular trauen. Bei der Entwicklung dieser Webseite habe ich das das erste Mal getan. "
+        },
+        {
+          "id": "primeng",
+          "name": "PrimeNG",
+          "rating": 60,
+          "text": "Die UI Libraries von PrimeTek empfand ich schon in meinen ersten Vue.js Projekten als eine gute Ergänzung zu den nativen HTML Elementen und den Komponenten des jeweiligen Frameworks. Da ich PrimeVue schon kannte, war für mich bei diesem Angular Projekt klar, dass ich hier mit PrimeNG arbeiten werde."
+        }
+      ]
+    },
+    {
+      "id": "methods",
+      "name": "Methoden",
+      "description": "Skills, die zur Softwareentwicklung gehören, aber nicht direkt zu Programmierung",
+      "icon": "pi-compass",
+      "skills": [
+        {
+          "id": "scrum",
+          "name": "Scrum",
+          "rating": 70,
+          "text": "Kennengelernt habe ich Scrum und agile Vorgehensweisen in der Universität. Viel praktische Erfahrung habe ich damit noch nicht. Bei meiner Arbeit bei levigo solutions habe ich einige Zeit an den Sprints teilgenommen, allerdings nur wenige Tage die Woche."
+        },
+        {
+          "id": "git",
+          "name": "Git",
+          "rating": 80,
+          "text": "Seitdem ich angefangen habe, im ersten Semester zu studieren, kenne ich Git und habe es dann auch für jedes Projekt, an dem ich länger als einen Tag gearbeitet habe, verwendet. Mit den Grundprinzipien kenne ich mich aus und bei spezielleren Problemen kann ich eigenständig nach Lösungen suchen. Meistens habe ich Git mit GitHub verwendet, einige Male auch GitLab."
+        },
+        {
+          "id": "jira",
+          "name": "Jira",
+          "rating": 70,
+          "text": "Jira ist die einzige Projektemanagementsoftware, die ich kenne und verwendet habe. Sowohl bei Teamprojekten an der Universität als auch bei der Arbeit bei levigo solutions habe ich damit gearbeitet und kenne mich dadurch grundlegend aus."
+        }
+      ]
+    },
+    {
+      "id": "os",
+      "name": "Betriebssysteme",
+      "description": "Die Verwendung des Betriebssystems ist ein essenzieller Teil bei der Softwareentwicklung und auch bei OS-nahen Technologien wie Shell-Scripts und Docker",
+      "icon": "pi-desktop",
+      "skills": [
+        {
+          "id": "mac",
+          "name": "MacOS",
+          "rating": 70,
+          "text": "MacOS ist mein aktuell verwendetes Betriebssystem seit Juli 2023. Nachdem ich lange auf Windows und Linux war, bin ich nun sehr zufrieden damit, da es meiner Meinung nach viele Vorzüge der beiden Konkurrenten vereint, während es die Schwachstellen dieser umgeht. Ich kenne mich nicht perfekt aus, finde mich aber gut zurecht und lerne stetig Neues."
+        },
+        {
+          "id": "linux",
+          "name": "Linux",
+          "rating": 60,
+          "text": "Nachdem mich die vielen Schwachpunkte von Windows in der Softwareentwicklung zu sehr gestört haben, habe ich ungefähr ein Jahr auf Ubuntu gearbeitet und somit mit Linux Erfahrung gesammelt. Außerdem habe ich durch die Arbeit mit Docker Containern viel über Bash-Skripte und weitere Prinzipien des Betriebssystems gelernt."
+        },
+        {
+          "id": "windows",
+          "name": "Windows",
+          "rating": 50,
+          "text": "So wie bei den meisten Menschen hatte mein erster PC Windows installiert und das habe ich viele Jahre vor meinem Studium genutzt. In vielen Punkten hat es mich beim Programmieren allerdings gestört, weswegen ich nach 3 Semestern auf Ubuntu umgestiegen bin."
+        }
+      ]
+    }
+  ],
+  "en": [
+    {
+      "id": "languages",
+      "name": "Sprachen",
+      "skills": [
+        {
+          "id": "german",
+          "name": "Deutsch",
+          "rating": 100,
+          "text": "Deutsch ist meine Muttersprache."
+        },
+        {
+          "id": "english",
+          "name": "Englisch",
+          "rating": 70,
+          "text": "Ich habe Englischunterricht bis zur 10. Klasse besucht. Sowohl in meiner Freizeit als auch als Software Entwickler beschäftige ich mich allerdings mit fast so vielen englischen Text- und Sprachinhalten wie deutschen. Dadurch bin ich in der Lage, die Sprache textuell und verbal sehr gut zu verstehen und auch gut zu sprechen. Durch das Abitur habe ich ... B1 und in Teilen B2 erhalten. TODO"
+        },
+        {
+          "id": "latin",
+          "name": "Latein",
+          "rating": 50,
+          "text": "Ich habe Latein von der 6. bis zur 12. Klasse unterrichtet bekommen und damit das große Latinum erhalten."
+        }
+      ]
+    },
+    {
+      "id": "backend",
+      "name": "Backend",
+      "skills": [
+        {
+          "id": "java",
+          "name": "Java",
+          "rating": 80,
+          "text": "",
+          "subSkills": ["SpringBoot", "Apache Camel"]
+        },
+        {
+          "id": "python",
+          "name": "Python",
+          "rating": 60,
+          "text": "",
+          "subSkills": ["Flask"]
+        },
+        {
+          "id": "c++",
+          "name": "C++",
+          "rating": 40,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "id": "frontend",
+      "name": "Frontend",
+      "skills": [
+        {
+          "id": "html-css",
+          "name": "HTML & CSS",
+          "rating": 80,
+          "text": ""
+        },
+        {
+          "id": "js",
+          "name": "JavaScript",
+          "rating": 80,
+          "text": ""
+        },
+        {
+          "id": "ts",
+          "name": "TypeScript",
+          "rating": 60,
+          "text": ""
+        },
+        {
+          "id": "angular",
+          "name": "Angular",
+          "rating": 60,
+          "text": ""
+        },
+        {
+          "id": "vue",
+          "name": "Vue.js",
+          "rating": 60,
+          "text": ""
+        }
+      ]
+    },
+    {
+      "id": "methods",
+      "name": "Methoden",
+      "skills": [
+        {
+          "id": "scrum",
+          "name": "Scrum",
+          "rating": 70,
+          "text": ""
+        },
+        {
+          "id": "git",
+          "name": "Git",
+          "rating": 80,
+          "text": ""
+        },
+        {
+          "id": "jira",
+          "name": "Jira",
+          "rating": 70,
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "TODO:remove": [
+    "Docker", "Kubernetes", "GitHub Actions", "SQL", "Swift", "SwiftUI"
+  ]
+}

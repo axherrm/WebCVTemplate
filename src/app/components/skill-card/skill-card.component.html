@@ -1,0 +1,25 @@
+<!-- Inspo:
+  - https://codepen.io/Yash-Flipkart/pen/NWLYdjo
+  - https://codepen.io/jon-marron/pen/QWyEeOo
+ -->
+<div class="card">
+  <div class="card-content front">
+    <!-- Add gradient: https://github.com/tigrr/circle-progress/issues/8 -->
+
+    <!--    <svg>-->
+    <!--      &lt;!&ndash; Gradient (just need to insert in the <svg> tag. The ID must be unique) &ndash;&gt;-->
+    <!--      <linearGradient id="linear-gradient">-->
+    <!--        <stop offset="0%" stop-color="gold"/>-->
+    <!--        <stop offset="100%" stop-color="teal"/>-->
+    <!--      </linearGradient>-->
+    <!--    </svg>-->
+    <circle-progress [value]="percent" max="100" text-format="percent"></circle-progress>
+    <div class="skill-title">{{ name }}</div>
+<!--    <div class="skill-description">-->
+<!--      {{ description }}-->
+<!--    </div>-->
+  </div>
+  <div class="card-content back" style="transform: rotateY(-180deg);">
+    {{ description }}
+  </div>
+</div>

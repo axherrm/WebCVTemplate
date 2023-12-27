@@ -1,0 +1,5 @@
+<h3 style="color: white; text-align: left;">{{ category.name }}</h3>
+<div class="skill-cards-container" style="width: 100%">
+  <skill-card3 *ngFor="let skill of category.skills" [name]="skill.name" [percent]="skill.rating"
+               [description]="skill.text"></skill-card3>
+</div>

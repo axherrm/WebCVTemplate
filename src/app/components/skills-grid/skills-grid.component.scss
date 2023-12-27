@@ -1,0 +1,10 @@
+.skill-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1rem;
+  justify-content: space-evenly;
+
+  & > skill-card3 {
+    flex-grow: 1;
+  }
+}

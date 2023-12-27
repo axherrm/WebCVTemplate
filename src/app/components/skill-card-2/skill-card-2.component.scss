@@ -1,0 +1,84 @@
+:host ::ng-deep {
+
+  //z-index: inherit;
+  //
+  //p-card {
+  //  z-index: inherit;
+  //}
+
+  .skill-card {
+    width: 10rem;
+    height: auto;
+    //margin: 1.25rem;
+    padding: 1.25rem;
+    //background: rgba(255,255,255,0.8);
+    background: rgba(255,255,255,1);
+    border: 1px solid #232323;
+    .p-card-content {
+      visibility: hidden;
+    }
+    &:hover {
+      circle-progress::part(circle) {
+        stroke-width: 0.2rem;
+        transition: all 0.5s ease-in-out;
+      }
+      .p-card-content {
+        visibility: visible;
+      }
+      //.skill-description {
+      //  display: block;
+      //}
+      //width: 15rem;
+      //transition: all 0.5s ease-in-out;
+    }
+  }
+
+  .p-card-body {
+    padding: 0;
+  }
+}
+
+circle-progress {
+  margin-top: 0.5rem;
+  width: 100%;
+  height: auto;
+}
+
+circle-progress::part(base) {
+  width: 100%;
+  height: auto;
+}
+
+circle-progress::part(value) {
+  stroke-width: 0.4rem;
+  stroke: #cb1bd2;
+  stroke-linecap: round;
+}
+circle-progress::part(circle) {
+  stroke: #262626;
+  stroke-width: 1rem;
+  transition: all 0.2s ease-in-out;
+  fill: white;
+}
+
+circle-progress::part(text) {
+  //font-family: "Georgia", serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  fill: #cb1bd2;
+}
+
+.skill-title {
+  text-align: center;
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  //text-align: justify;
+  font-weight: 600;
+  background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.skill-description {
+  display: none;
+}

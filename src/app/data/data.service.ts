@@ -2,7 +2,8 @@ import {Injectable} from '@angular/core';
 import * as educationJson from '../../data/education.json';
 import * as languagesJson from '../../data/languages.json';
 import * as experienceJson from '../../data/experience.json';
-import {EducationItem, ExperienceItem, LanguagePack} from "./model";
+import * as skillsJson from '../../data/skills.json';
+import {EducationItem, ExperienceItem, LanguagePack, Skill, SkillCategory} from "./model";
 import {MenuItem} from "primeng/api";
 
 @Injectable({
@@ -18,6 +19,8 @@ export class DataService {
   languagePack: LanguagePack;
   education: EducationItem[];
   experience: ExperienceItem[];
+  skillCategories: SkillCategory[];
+  skills: Skill[];
 
   constructor() {
     this.determineLanguage();
@@ -31,6 +34,12 @@ export class DataService {
     this.languagePack = languagesJson[this.lang];
     // @ts-ignore
     this.experience = experienceJson[this.lang];
+    // @ts-ignore
+    this.skillCategories = skillsJson[this.lang];
+    this.skills = [];
+    for (let skillCategory of this.skillCategories) {
+      this.skills = this.skills.concat(skillCategory.skills);
+    }
     this.fillLanguageButton();
   }
 

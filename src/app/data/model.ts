@@ -15,7 +15,22 @@ export interface ExperienceItem extends TimelineItem {
 }
 
 export interface Skill {
+  id: string;
+  name: string;
+  rating: number;
+  text: string;
+  subSkills?: string[];
+}
 
+export interface SkillCategory {
+  id: string;
+  name: string;
+  description: string;
+  icon: string;
+  /**
+   * Maximum of 20 skills is supported.
+   */
+  skills: Skill[];
 }
 
 export interface LanguagePack {

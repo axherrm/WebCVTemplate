@@ -1,0 +1,38 @@
+:host {
+  //test: abc;
+}
+
+.card {
+  background: none;
+  backdrop-filter: blur(4px);
+  border: 1px solid #232323;
+  border-radius: 20px;
+  //margin: 0 10vw;
+  //max-height: 70vh;
+  //width: auto;
+}
+
+.cat-card-title {
+  color: white;
+  font-size: 1.9rem;
+}
+
+.skill-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  max-height: calc(90vh - 14rem);
+  //max-width: calc(10rem * 6 / 2);
+  //min-width: 0;
+}
+
+//:host ::ng-deep {
+//  .skill-cat-card {
+//    //background: rgba(255,255,255,0.8);
+//    background: none;
+//    backdrop-filter: blur(4px);
+//    border: 1px solid #232323;
+//  }
+//
+//
+//}

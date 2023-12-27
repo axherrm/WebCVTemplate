@@ -1,0 +1,33 @@
+<div #container class="container">
+  <div #category_container class="category-container">
+    <div class="icon-container">
+      <span class="pi {{ category.icon }} icon"></span>
+    </div>
+    <!-- TODO bar graph -->
+    <h2 #title class="category-title">{{ category.name }}</h2>
+    <p class="category-subtitle" [innerHTML]="category.description"></p>
+  </div>
+  <div #skills_container class="skills-container">
+    <skills-card-4 #skills *ngFor="let skill of category.skills" [name]="skill.name" [description]="skill.text" [rating]="skill.rating"></skills-card-4>
+<!--    <div #skills class="skill-card reverse-z-index-children" *ngFor="let skill of category.skills">-->
+<!--      <div class="card-content front">-->
+<!--        <circle-progress [value]="skill.rating" max="100" text-format="percent"></circle-progress>-->
+<!--        <div class="skill-title">{{ skill.name }}</div>-->
+<!--      </div>-->
+<!--      <div class="card-content back" style="transform: rotateY(-180deg);">-->
+<!--        {{ skill.text }}-->
+<!--      </div>-->
+<!--    </div>-->
+  </div>
+</div>
+
+
+<!-- Add gradient: https://github.com/tigrr/circle-progress/issues/8 -->
+
+<!--    <svg>-->
+<!--      &lt;!&ndash; Gradient (just need to insert in the <svg> tag. The ID must be unique) &ndash;&gt;-->
+<!--      <linearGradient id="linear-gradient">-->
+<!--        <stop offset="0%" stop-color="gold"/>-->
+<!--        <stop offset="100%" stop-color="teal"/>-->
+<!--      </linearGradient>-->
+<!--    </svg>-->

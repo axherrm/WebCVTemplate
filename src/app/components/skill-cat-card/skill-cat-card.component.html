@@ -1,0 +1,7 @@
+<div class="card">
+  <h3 class="cat-card-title">{{ category.name }}</h3>
+  <div #skill_card_container class="skill-card-container">
+    <skill-card *ngFor="let skill of category.skills"
+                [name]="skill.name" [percent]="skill.rating" [description]="skill.text" [style]="{'margin-bottom': gap + 'px'}"></skill-card>
+  </div>
+</div>

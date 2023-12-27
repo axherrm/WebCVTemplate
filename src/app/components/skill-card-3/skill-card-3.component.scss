@@ -1,0 +1,141 @@
+:host {
+  font-family: "Inter-Medium", "Inter", sans-serif;
+  font-weight: 500;
+}
+
+.card {
+  min-width: 15rem;
+  min-height: 22rem;
+  //margin: 1.25rem;
+  //padding: 1.25rem;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate-back 1s ease-in-out forwards;
+  &:hover {
+    circle-progress::part(circle) {
+      stroke-width: 0.2rem;
+    }
+
+    //animation: rotate 1s ease-in-out forwards;
+
+    //.skill-description {
+    //  //display: block;
+    //  max-height: 11rem;
+    //  visibility: visible;
+    //  opacity: 1;
+    //}
+    //margin-left: -1.25rem;
+    //margin-right: -1.25rem;
+    //width: 15rem;
+  }
+
+  .card-content {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #262626;
+    border-radius: 3rem;
+    top: 0;
+    left: 0;
+    padding: 2rem;
+    backface-visibility: hidden;
+    &.front {
+      //display: flex;
+      //flex-wrap: wrap;
+      //justify-content: space-evenly;
+      //display:
+      float: left;
+    }
+  }
+}
+
+.title-container {
+  width: min(100%, 8rem);
+  float: left;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.skill-title {
+  text-align: center;
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  //text-align: justify;
+  font-weight: 600;
+  background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+circle-progress {
+  margin-top: 0.5rem;
+  //width: 8rem;
+  //width: min(100%, 8rem);
+  width: 100%;
+  height: auto;
+}
+
+circle-progress::part(base) {
+  width: 100%;
+  height: auto;
+}
+
+circle-progress::part(value) {
+  stroke-width: 0.4rem;
+  stroke: #cb1bd2;
+  stroke-linecap: round;
+}
+circle-progress::part(circle) {
+  stroke: #262626;
+  stroke-width: 1rem;
+  transition: all 0.3s ease-in-out;
+  //transition: all 0.2s ease-in-out;
+  fill: white;
+}
+
+circle-progress::part(text) {
+  //font-family: "Georgia", serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  fill: #cb1bd2;
+}
+
+//.skill-description {
+//  //display: none;
+//  max-height: 0;
+//  visibility: hidden;
+//  opacity: 0;
+//  transition: visibility 0s, opacity 0.3s linear, max-height 0.3s;
+//  overflow: hidden;
+//  text-overflow: ellipsis;
+//  // required for text-overflow: ellipsis to work without whitespace: nowrap
+//  display: -webkit-box;
+//  -webkit-line-clamp: 9; // needs to be adjusted to max-height
+//  -webkit-box-orient: vertical;
+//}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(20deg);
+  }
+  100% {
+    transform: rotateY(-180deg);
+  }
+}
+@keyframes rotate-back {
+  0% {
+    transform: rotateY(-180deg);
+  }
+  50% {
+    transform: rotateY(-200deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
