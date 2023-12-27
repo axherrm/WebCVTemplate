@@ -24,16 +24,20 @@
   }
 }
 
-.dot {
-  height: 25px;
-  width: 25px;
-  background-color: #ffffff;
-  border-radius: 50%;
-  border: 3px solid #a1a1a1;
-  display: inline-block;
-}
-
 :host ::ng-deep {
+
+  .p-timeline-event-separator {
+    transform: translateY(calc((2.25rem - 1.6rem) / 2));
+    .dot {
+      height: 1.6rem;
+      width: 1.6rem;
+      background-color: #ffffff;
+      border-radius: 50%;
+      border: 3px solid rgba(75,75,75,1);
+      display: inline-block;
+    }
+  }
+
   .p-card-content {
     padding: 0;
   }
