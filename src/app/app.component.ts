@@ -31,9 +31,13 @@ export class AppComponent {
   }
 
   ngAfterViewInit(): void {
+    this.addLangButtonAnimation();
+  }
+
+  addLangButtonAnimation() {
     const tl: gsap.core.Timeline = gsap.timeline({
       scrollTrigger: {
-        start: "top 90%%",
+        start: "top 90%",
         trigger: this.educationCard.nativeElement,
         end: "top top",
         // markers: true, // TODO remove
