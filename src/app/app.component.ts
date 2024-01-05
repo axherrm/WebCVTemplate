@@ -34,6 +34,11 @@ export class AppComponent {
 
   ngAfterViewInit(): void {
     this.addLangButtonAnimation();
+    // this.addAlarmClockAnimation(this.educationCard.nativeElement.children[0]);
+    // @ts-ignore
+    for (let el of document.getElementsByClassName("alarm-clock-animated")) {
+      this.addAlarmClockAnimation(el);
+    }
   }
 
   addLangButtonAnimation() {
@@ -54,5 +59,46 @@ export class AppComponent {
         opacity: 0,
         ease: "power1.in"
       }, "<");
+  }
+
+  addAlarmClockAnimation(el: HTMLElement) {
+    const bottomHalfTl: gsap.core.Timeline = gsap.timeline({
+      scrollTrigger: {
+        start: "top bottom",
+        trigger: el,
+        end: "center center",
+        // markers: true, // TODO remove
+        scrub: true,
+      },
+      defaults: {
+        ease: "power1.out"
+      }
+    });
+    const upperHalfTl: gsap.core.Timeline = gsap.timeline({
+      scrollTrigger: {
+        start: "center center",
+        trigger: el,
+        end: "bottom top",
+        // markers: true, // TODO remove
+        scrub: true,
+      },
+      defaults: {
+        ease: "power1.in"
+      }
+    });
+    bottomHalfTl.fromTo(el, {
+      scale: 0.9,
+      filter: "brightness(0.8)"
+      // rotationX: "30deg"
+    }, {
+      scale: 1,
+      filter: "brightness(1)"
+      // rotationX: "0deg"
+    });
+    upperHalfTl.to(el, {
+      scale: 0.9,
+      filter: "brightness(0.8)"
+      // rotationX: "-30deg"
+    })
   }
 }
