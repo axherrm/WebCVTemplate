@@ -14,6 +14,17 @@ export class HeadingCardComponent {
 
   @Input() heading: string;
 
-  @Input() type?: "light" | "dark" = "dark";
+  @Input() type: "light" | "dark" = "dark";
+
+  @Input() styleClass: string = "";
+
+  cardStyleClass: string;
+
+  ngAfterContentInit() {
+    this.cardStyleClass = this.type==='light' ? 'heading-card-light' : 'heading-card-dark';
+    if (this.styleClass.length > 0) {
+      this.cardStyleClass += " " + this.styleClass;
+    }
+  }
 
 }
