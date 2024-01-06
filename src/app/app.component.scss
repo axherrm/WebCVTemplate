@@ -38,56 +38,15 @@
     }
   }
 
-  .p-card-content {
-    padding: 0;
-  }
-
-  .border-dark {
-    border: 1px solid #232323;
-  }
-
-  .border-bright {
-    border: 1px solid #7a7a7a;
-  }
-
-  .background-dark {
-    background: rgba(75,75,75,0.9);
-  }
-
-  .background-white {
-    background: rgba(255,255,255,0.8);
-  }
-
-  .timeline-card-education {
-    @extend .border-dark;
-    @extend .background-white;
-    margin-bottom: 3vh;
-  }
-
-  .timeline-date-education {
-    @extend .border-bright;
-    @extend .background-dark;
-  }
-
-  .timeline-card-experience {
-    @extend .border-bright;
-    @extend .background-dark;
-    margin-bottom: 3vh;
-    color: #dcdcdc;
-
-    &> div.p-card-body > div.p-card-title {
-      color: white;
-    }
-
-    &> div.p-card-body > div.p-card-subtitle {
-      color: #ffffff;
-    }
-  }
-
-  .timeline-date-experience {
-    @extend .border-dark;
-    @extend .background-white;
+  .timeline-date-light {
+    background: var(--background-light);
+    border: var(--border-dark);
     color: #4B5563;
+  }
+
+  .timeline-date-dark {
+    background: var(--background-dark);
+    border: var(--border-light);
   }
 
 }

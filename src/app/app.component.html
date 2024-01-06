@@ -30,47 +30,33 @@
   </div>
 
   <div style="text-align: center">
-    <p-card #education_card styleClass="border-dark" [style]="{'width': '80%', 'display': 'inline-block', 'margin-bottom': '5vh'}">
-      <ng-template pTemplate="content">
-        <h1 style="margin: 0">{{ dataService.languagePack.education }}</h1>
-      </ng-template>
-    </p-card>
+    <heading-card #education_card [heading]="dataService.languagePack.education" type="light"></heading-card>
     <p-timeline id="eduction-tl" [value]="dataService.education" align="alternate" [style]="{'width': '70%', 'display': 'inline-block'}">
       <ng-template pTemplate="marker">
         <span class="dot"></span>
       </ng-template>
       <ng-template pTemplate="content" let-educationItem>
-        <p-card [header]="educationItem.heading" [subheader]="educationItem.subheading" styleClass="timeline-card-education">
-          <p [innerHTML]="educationItem.content" style="margin-bottom: 0"></p>
-          <p *ngIf="educationItem.bulletPoints" style="margin-bottom: 0">
-            <p-badge *ngFor="let bulletPoint of educationItem.bulletPoints" [value]="bulletPoint" [style]="{'margin': '0 0.3vh', 'background': 'rgba(75,85,93,0.7)'}"></p-badge>
-          </p>
-        </p-card>
+        <timeline-card type="light" [heading]="educationItem.heading" [subheading]="educationItem.subheading"
+                       [content]="educationItem.content" [bulletPoints]="educationItem.bulletPoints">
+        </timeline-card>
       </ng-template>
       <ng-template pTemplate="opposite" let-educationItem>
-        <p-badge [value]="educationItem.date" size="large" styleClass="timeline-date-education"></p-badge>
+        <p-badge [value]="educationItem.date" size="large" styleClass="timeline-date-dark"></p-badge>
       </ng-template>
     </p-timeline>
 
-    <p-card #experience_card styleClass="border-bright" [style]="{'width': '80%', 'display': 'inline-block', 'margin-bottom': '5vh', 'background': 'rgb(75,75,75)', 'color': 'white'}">
-      <ng-template pTemplate="content">
-        <h1 style="margin: 0">{{ dataService.languagePack.experience }}</h1>
-      </ng-template>
-    </p-card>
+    <heading-card #experience_card [heading]="dataService.languagePack.experience" type="dark"></heading-card>
     <p-timeline id="experience-tl" [value]="dataService.experience" align="alternate" [style]="{'width': '70%', 'display': 'inline-block'}">
       <ng-template pTemplate="marker">
         <span class="dot"></span>
       </ng-template>
       <ng-template pTemplate="content" let-experienceItem>
-        <p-card [header]="experienceItem.heading" [subheader]="experienceItem.subheading" styleClass="timeline-card-experience">
-          <p [innerHTML]="experienceItem.content" style="margin-bottom: 0"></p>
-          <p *ngIf="experienceItem.skills" style="margin-bottom: 0">
-            <p-badge *ngFor="let skill of experienceItem.skills" [value]="skill" [style]="{'margin': '0 0.3vh', 'background': 'rgba(75,85,93,0.7)'}"></p-badge>
-          </p>
-        </p-card>
+        <timeline-card type="dark" [heading]="experienceItem.heading" [subheading]="experienceItem.subheading"
+                       [content]="experienceItem.content" [bulletPoints]="experienceItem.skills">
+        </timeline-card>
       </ng-template>
       <ng-template pTemplate="opposite" let-experienceItem>
-        <p-badge [value]="experienceItem.date" size="large" styleClass="timeline-date-experience"></p-badge>
+        <p-badge [value]="experienceItem.date" size="large" styleClass="timeline-date-light"></p-badge>
       </ng-template>
     </p-timeline>
   </div>

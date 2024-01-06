@@ -1,0 +1,21 @@
+:host ::ng-deep {
+  .p-card-content {
+    padding: 0;
+  }
+
+  .heading-card {
+    width: 80%;
+    display: inline-block;
+    margin-bottom: 5vh;
+  }
+
+  .heading-card-light {
+    @extend .heading-card;
+  }
+
+  .heading-card-dark {
+    @extend .heading-card;
+    background: rgb(75,75,75);
+    color: white;
+  }
+}

@@ -1,0 +1,8 @@
+<p-card [header]="heading" [subheader]="subheading"
+        [styleClass]="type==='light'? 'timeline-card-light' : 'timeline-card-dark'">
+  <div [innerHTML]="content" style="margin-top: 1rem"></div>
+  <div *ngIf="bulletPoints" style="margin-top: 1rem">
+    <p-badge *ngFor="let bulletPoint of bulletPoints" [value]="bulletPoint"
+             [style]="{'margin': '0 0.3vh', 'background': 'rgba(75,85,93,0.7)'}"></p-badge>
+  </div>
+</p-card>

@@ -36,6 +36,11 @@ html {
   .text-color-grey-dark-2 { color: var(--color-grey-dark-2); }
   .text-color-grey-medium-1 { color: var(--color-grey-medium-1); }
   .color-white-darker { color: var(--color-white-darker); }
+
+  --border-light: 1px solid #7a7a7a;
+  --border-dark: 1px solid #232323;
+  --background-light: rgba(255, 255, 255, 0.8);
+  --background-dark: rgba(75, 75, 75, 0.9);
 }
 
 .text {

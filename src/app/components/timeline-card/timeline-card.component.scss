@@ -1,0 +1,30 @@
+:host ::ng-deep {
+  .p-card-content {
+    padding: 0;
+  }
+
+  .timeline-card {
+    margin-bottom: 3vh;
+  }
+
+  .timeline-card-light {
+    @extend .timeline-card;
+    border: var(--border-dark);
+    background: var(--background-light);
+  }
+
+  .timeline-card-dark {
+    @extend .timeline-card;
+    border: var(--border-light);
+    background: var(--background-dark);
+    color: #dcdcdc;
+
+    & > div.p-card-body > div.p-card-title {
+      color: white;
+    }
+
+    & > div.p-card-body > div.p-card-subtitle {
+      color: #ffffff;
+    }
+  }
+}

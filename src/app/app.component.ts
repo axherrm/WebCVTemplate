@@ -8,13 +8,15 @@ import gsap from 'gsap';
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import {DataService} from "./data/data.service";
 import {SpeedDialModule} from "primeng/speeddial";
+import {TimelineCardComponent} from "./components/timeline-card/timeline-card.component";
+import {HeadingCardComponent} from "./components/heading-card/heading-card.component";
 
 gsap.registerPlugin(ScrollTrigger);
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, NgOptimizedImage, TimelineModule, CardModule, ButtonModule, BadgeModule, SpeedDialModule],
+  imports: [CommonModule, NgOptimizedImage, TimelineModule, CardModule, ButtonModule, BadgeModule, SpeedDialModule, TimelineCardComponent, HeadingCardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

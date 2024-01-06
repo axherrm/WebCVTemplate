@@ -3,10 +3,11 @@ export interface TimelineItem {
   subheading: string;
   date: string;
   content: string;
+  bulletPoints?: string[];
 }
 
 export interface EducationItem extends TimelineItem {
-  bulletPoints?: string[];
+
 }
 
 export interface ExperienceItem extends TimelineItem {
