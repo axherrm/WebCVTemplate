@@ -49,4 +49,22 @@
     border: var(--border-light);
   }
 
+  .p-timeline-vertical.p-timeline-alternate .p-timeline-event:nth-child(2n) {
+    .p-timeline-event-content timeline-card p-card div {
+      transform-origin: right top;
+    }
+    .p-timeline-event-opposite p-badge span {
+      transform-origin: left top;
+    }
+  }
+
+  .p-timeline-vertical.p-timeline-alternate .p-timeline-event:nth-child(2n + 1) {
+    .p-timeline-event-content timeline-card p-card div {
+      transform-origin: left top;
+    }
+    .p-timeline-event-opposite p-badge span {
+      transform-origin: right top;
+    }
+  }
+
 }

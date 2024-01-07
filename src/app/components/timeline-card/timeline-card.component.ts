@@ -23,6 +23,17 @@ export class TimelineCardComponent {
   @Input() content: string;
   @Input() bulletPoints?: string[];
 
-  @Input() type?: "light" | "dark" = "light";
+  @Input() type: "light" | "dark" = "light";
+
+  @Input() styleClass: string = "";
+
+  cardStyleClass: string;
+
+  ngAfterContentInit() {
+    this.cardStyleClass = this.type === 'light'? 'timeline-card-light' : 'timeline-card-dark';
+    if (this.styleClass.length > 0) {
+      this.cardStyleClass += " " + this.styleClass;
+    }
+  }
 
 }

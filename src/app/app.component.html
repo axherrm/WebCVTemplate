@@ -30,33 +30,33 @@
   </div>
 
   <div style="text-align: center">
-    <heading-card #education_card [heading]="dataService.languagePack.education" type="light"></heading-card>
+    <heading-card #education_card [heading]="dataService.languagePack.education" type="light" styleClass="alarm-clock-animated"></heading-card>
     <p-timeline id="eduction-tl" [value]="dataService.education" align="alternate" [style]="{'width': '70%', 'display': 'inline-block'}">
       <ng-template pTemplate="marker">
         <span class="dot"></span>
       </ng-template>
       <ng-template pTemplate="content" let-educationItem>
         <timeline-card type="light" [heading]="educationItem.heading" [subheading]="educationItem.subheading"
-                       [content]="educationItem.content" [bulletPoints]="educationItem.bulletPoints">
+                       [content]="educationItem.content" [bulletPoints]="educationItem.bulletPoints" styleClass="alarm-clock-animated">
         </timeline-card>
       </ng-template>
       <ng-template pTemplate="opposite" let-educationItem>
-        <p-badge [value]="educationItem.date" size="large" styleClass="timeline-date-dark"></p-badge>
+        <p-badge [value]="educationItem.date" size="large" styleClass="timeline-date-dark alarm-clock-animated"></p-badge>
       </ng-template>
     </p-timeline>
 
-    <heading-card #experience_card [heading]="dataService.languagePack.experience" type="dark"></heading-card>
+    <heading-card #experience_card [heading]="dataService.languagePack.experience" type="dark" styleClass="alarm-clock-animated"></heading-card>
     <p-timeline id="experience-tl" [value]="dataService.experience" align="alternate" [style]="{'width': '70%', 'display': 'inline-block'}">
       <ng-template pTemplate="marker">
         <span class="dot"></span>
       </ng-template>
       <ng-template pTemplate="content" let-experienceItem>
         <timeline-card type="dark" [heading]="experienceItem.heading" [subheading]="experienceItem.subheading"
-                       [content]="experienceItem.content" [bulletPoints]="experienceItem.skills">
+                       [content]="experienceItem.content" [bulletPoints]="experienceItem.skills" styleClass="alarm-clock-animated">
         </timeline-card>
       </ng-template>
       <ng-template pTemplate="opposite" let-experienceItem>
-        <p-badge [value]="experienceItem.date" size="large" styleClass="timeline-date-light"></p-badge>
+        <p-badge [value]="experienceItem.date" size="large" styleClass="timeline-date-light alarm-clock-animated"></p-badge>
       </ng-template>
     </p-timeline>
   </div>
