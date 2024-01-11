@@ -13,6 +13,8 @@ import {HeadingCardComponent} from "./components/heading-card/heading-card.compo
 
 gsap.registerPlugin(ScrollTrigger);
 
+import "./js/lenis.js";
+
 @Component({
   selector: 'app-root',
   standalone: true,
