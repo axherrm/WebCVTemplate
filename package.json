@@ -17,6 +17,7 @@
     "@angular/platform-browser": "^17.0.7",
     "@angular/platform-browser-dynamic": "^17.0.7",
     "@angular/router": "^17.0.7",
+    "@studio-freight/lenis": "^1.0.33",
     "gsap": "^3.12.2",
     "primeicons": "^6.0.1",
     "primeng": "^17.0.0",
