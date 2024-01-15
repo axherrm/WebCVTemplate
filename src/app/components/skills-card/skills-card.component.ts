@@ -1,6 +1,5 @@
 import {
   Component,
-  CUSTOM_ELEMENTS_SCHEMA,
   ElementRef, HostListener,
   Input,
   QueryList,
@@ -10,18 +9,17 @@ import {
 } from '@angular/core';
 import {SkillCategory} from "../../data/model";
 import {NgForOf} from "@angular/common";
-import {SkillsCard4Component} from "../skills-card-4/skills-card-4.component";
+import {SkillCardComponent} from "../skill-card/skill-card.component";
 
 @Component({
   selector: 'skills-card',
   standalone: true,
   imports: [
     NgForOf,
-    SkillsCard4Component
+    SkillCardComponent
   ],
   templateUrl: './skills-card.component.html',
   styleUrl: './skills-card.component.scss',
-  // schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class SkillsCardComponent {
 

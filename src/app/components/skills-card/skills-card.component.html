@@ -8,16 +8,7 @@
     <p class="category-subtitle" [innerHTML]="category.description"></p>
   </div>
   <div #skills_container class="skills-container">
-    <skills-card-4 #skills *ngFor="let skill of category.skills" [name]="skill.name" [description]="skill.text" [rating]="skill.rating"></skills-card-4>
-<!--    <div #skills class="skill-card reverse-z-index-children" *ngFor="let skill of category.skills">-->
-<!--      <div class="card-content front">-->
-<!--        <circle-progress [value]="skill.rating" max="100" text-format="percent"></circle-progress>-->
-<!--        <div class="skill-title">{{ skill.name }}</div>-->
-<!--      </div>-->
-<!--      <div class="card-content back" style="transform: rotateY(-180deg);">-->
-<!--        {{ skill.text }}-->
-<!--      </div>-->
-<!--    </div>-->
+    <skill-card #skills *ngFor="let skill of category.skills" [name]="skill.name" [description]="skill.text" [rating]="skill.rating"></skill-card>
   </div>
 </div>
 

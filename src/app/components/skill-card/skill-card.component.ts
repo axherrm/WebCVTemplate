@@ -1,22 +1,22 @@
-import {Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, Input, ViewChild} from '@angular/core';
-import {CardModule} from "primeng/card";
-import {SharedModule} from "primeng/api";
+import {Component, CUSTOM_ELEMENTS_SCHEMA, Input} from '@angular/core';
+import {NgForOf} from "@angular/common";
 
 @Component({
   selector: 'skill-card',
   standalone: true,
   imports: [
-    CardModule,
-    SharedModule
+    NgForOf
   ],
   templateUrl: './skill-card.component.html',
   styleUrl: './skill-card.component.scss',
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class SkillCardComponent {
 
   @Input() name: string;
-  @Input() percent: number;
   @Input() description: string;
+  @Input() rating: number;
+
+  rotated: boolean = false;
 
 }

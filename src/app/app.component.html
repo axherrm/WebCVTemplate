@@ -60,47 +60,9 @@
       </ng-template>
     </p-timeline>
 
-    <div #skills_section>
-      <heading-card [heading]="dataService.languagePack.skills" type="light"></heading-card>
-
-      <div #skills_container class="flex flex-nowrap justify-content-evenly" style="height: calc(85vh - 6rem); align-items: center; margin-bottom: 5vh; gap: 10vw; position: relative">
-        <skill-cat-card *ngFor="let skillCategory of dataService.skillCategories" [category]="skillCategory"></skill-cat-card>
-      </div>
-    </div>
-
-    <div style="margin-bottom: 500px"></div>
-
-    <div class="flex flex-wrap justify-content-evenly" style="align-items: center; gap: 3rem; position: relative; width: var(--main-content-width); margin: 0 var(--main-content-side-margin)">
-      <skill-cat-card-2 *ngFor="let skillCategory of dataService.skillCategories" [category]="skillCategory"></skill-cat-card-2>
-    </div>
-
-<!--    <div style="margin-bottom: 500px"></div>-->
-
-    <div style="margin-bottom: 500px"></div>
-
-    <div style="width: var(--main-content-width); margin: 0 var(--main-content-side-margin)">
-      <skills-grid *ngFor="let skillCategory of dataService.skillCategories" [category]="skillCategory"></skills-grid>
-    </div>
-
-    <div style="margin-bottom: 500px"></div>
-
+    <heading-card [heading]="dataService.languagePack.skills" type="light" styleClass="alarm-clock-animated"></heading-card>
     <div style="width: var(--main-content-width); margin: 0 var(--main-content-side-margin); display: flex; flex-direction: column; flex-wrap: nowrap; gap: 1rem">
-      <skills-card *ngFor="let skillCategory of dataService.skillCategories" [category]="skillCategory"></skills-card>
+      <skills-card class="alarm-clock-animated" *ngFor="let skillCategory of dataService.skillCategories" [category]="skillCategory"></skills-card>
     </div>
-
-    <!-- Inspo: https://codepen.io/william-goldsworthy/pen/JzVajj found on https://freefrontend.com/css-stacked-cards/ -->
-    <div class="flex justify-content-center card-stack">
-      <skill-card2 *ngFor="let skill of dataService.skillCategories[2].skills"
-                  [name]="skill.name" [percent]="skill.rating" [description]="skill.text"
-      [style]="{'position': 'relative'}"></skill-card2>
-    </div>
-
-
-
-
-    <!--    <p (mouseover)="overlay.show($event)" (mouseleave)="overlay.hide()">HIER</p>-->
-<!--    <p-overlayPanel #overlay>-->
-<!--      TEST-->
-<!--    </p-overlayPanel>-->
   </div>
 </main>
