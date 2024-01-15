@@ -1,30 +1,42 @@
-:host ::ng-deep {
-  .p-card-content {
-    padding: 0;
+.card {
+  margin-bottom: 3vh;
+  border-radius: 20px;
+  padding: 1.25rem;
+}
+
+.timeline-card-light {
+  @extend .card;
+  background: white;
+  color: #4b5563;
+  .subheading {
+    color: #6b7280;
   }
+}
 
-  .timeline-card {
-    margin-bottom: 3vh;
+.timeline-card-dark {
+  @extend .card;
+  background: rgb(75,75,75);
+  color: #dcdcdc;
+  .subheading {
+    color: #dedede;
   }
+}
 
-  .timeline-card-light {
-    @extend .timeline-card;
-    border: var(--border-dark);
-    background: var(--background-light);
-  }
+.heading {
+  margin: 0 0 .5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
 
-  .timeline-card-dark {
-    @extend .timeline-card;
-    border: var(--border-light);
-    background: var(--background-dark);
-    color: #dcdcdc;
+.subheading {
+  font-weight: 400;
+  margin: 0 0 .5rem;
+}
 
-    & > div.p-card-body > div.p-card-title {
-      color: white;
-    }
+.content {
+  margin-top: 1rem;
+}
 
-    & > div.p-card-body > div.p-card-subtitle {
-      color: #ffffff;
-    }
-  }
+.bullet-point-container {
+  margin-top: 1rem;
 }

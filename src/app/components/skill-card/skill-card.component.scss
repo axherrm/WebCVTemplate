@@ -1,4 +1,18 @@
 :host {
+  // color vars:
+  // OLD:
+  --background: #000000;
+  --circle-background: white;
+  --circle-text: #cb1bd2;
+  --circle-stroke: #cb1bd2;
+
+  // Variant 1 NEW:
+  //--background: white;
+  //--circle-background: #262626;
+  //--circle-text: white;
+  //--circle-stroke: #cb1bd2;
+
+
   @for $i from 1 through 20 {
     &:nth-child(#{$i}) {
       --nth-child: #{$i};
@@ -17,20 +31,21 @@
   transition: all 0.3s ease-in-out;
   position: relative;
 
-  .animation-container {
-    height: 100%;
-    width: 100%;
-    transform-style: preserve-3d;
-    animation: rotate-back 1s ease-in-out forwards;
-    &.card-rotated {
-      animation: rotate 1s ease-in-out forwards;
-    }
+  transform-style: preserve-3d;
+  animation: rotate-back 1s ease-in-out forwards;
+  &.card-rotated {
+    animation: rotate 1s ease-in-out forwards;
   }
 
-
-
   &:hover {
-    transform: scale(1.2);
+    width: 13.2rem;
+    height: 20.4rem;
+    margin: -1.7rem -1.1rem;
+
+    .skill-title {
+      margin: 2.04rem 0 0;
+      font-size: 1.8rem;
+    }
 
     circle-progress::part(circle) {
       stroke-width: 0.2rem;
@@ -53,8 +68,9 @@
   height: 100%;
   width: 100%;
   position: absolute;
-  background: #000000;
-  border: 2px solid wheat;
+  //background: #000000;
+  background: var(--background);
+  border: 4px solid #262626;
   border-radius: 1.5rem;
   top: 0;
   left: 0;
@@ -63,6 +79,7 @@
   transition: all 0.3s ease-in-out;
 
   .skill-title {
+    transition: all 0.3s ease-in-out;
     text-align: center;
     margin: 1.7rem 0 0;
     font-size: 1.5rem;
@@ -77,6 +94,7 @@
     font-size: 0.8rem;
     text-align: justify;
     padding: 0.67rem;
+    transform: rotateY(-180deg);
     span {
       height: 100%;
       width: 100%;
@@ -102,22 +120,26 @@ circle-progress {
 
   &::part(value) {
     stroke-width: 0.4rem;
-    stroke: #cb1bd2;
+    //stroke: #cb1bd2;
+    stroke: var(--circle-stroke);
     stroke-linecap: round;
   }
 
   &::part(circle) {
-    stroke: #000000;
+    //stroke: #000000;
+    stroke: var(--background);
     stroke-width: 1rem;
     transition: all 0.3s ease-in-out;
-    fill: white;
+    //fill: white;
+    fill: var(--circle-background);
   }
 
   &::part(text) {
     //font-family: "Georgia", serif;
     font-weight: 600;
     font-size: 0.8rem;
-    fill: #cb1bd2;
+    //fill: #cb1bd2;
+    fill: var(--circle-text);
   }
 }
 

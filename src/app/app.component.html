@@ -31,7 +31,7 @@
     </div>
   </div>
 
-  <div style="text-align: center">
+  <div style="text-align: center; display: flex; flex-direction: column; align-items: center">
     <heading-card #education_card [heading]="dataService.languagePack.education" type="light" styleClass="alarm-clock-animated"></heading-card>
     <p-timeline id="eduction-tl" [value]="dataService.education" align="alternate" [style]="{'width': '70%', 'display': 'inline-block'}">
       <ng-template pTemplate="marker">
@@ -66,5 +66,7 @@
     <div style="width: var(--main-content-width); margin: 0 var(--main-content-side-margin); display: flex; flex-direction: column; flex-wrap: nowrap; gap: 1rem">
       <skills-card class="alarm-clock-animated" *ngFor="let skillCategory of dataService.skillCategories" [category]="skillCategory"></skills-card>
     </div>
+
+    <div class="spacer" style="width: 100vw; height: 50vh"></div>
   </div>
 </main>

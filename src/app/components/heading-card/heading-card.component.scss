@@ -1,28 +1,32 @@
-:host ::ng-deep {
-  .p-card-content {
-    padding: 0;
-  }
+:host {
+  width: 80%;
+  margin-bottom: 5vh;
+  display: block;
+}
 
-  .heading-card {
-    width: 80%;
-    display: inline-block;
-    margin-bottom: 5vh;
-  }
+.card {
+  border-radius: 20px;
+  width: 100%;
+  padding: 1.25rem;
+  display: inline-block;
+  text-align: center;
+}
 
-  .heading-card-light {
-    @extend .heading-card;
-  }
+.heading-card-light {
+  @extend .card;
+  background: white;
+  color: #4b5563;
+}
 
-  .heading-card-dark {
-    @extend .heading-card;
-    background: rgb(75,75,75);
-    color: white;
-  }
+.heading-card-dark {
+  @extend .card;
+  background: rgb(75,75,75);
+  color: white;
+}
 
-  .heading-card-3 {
-    @extend .heading-card;
-    background: #262626;
-    color: wheat;
-    border-radius: 20px;
-  }
+.heading-card-3 {
+  @extend .card;
+  background: #262626;
+  color: white;
+  border-radius: 20px;
 }
