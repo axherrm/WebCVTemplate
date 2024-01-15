@@ -1,4 +1,4 @@
-import {Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, ViewChild} from '@angular/core';
+import {Component, ElementRef, ViewChild} from '@angular/core';
 import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {TimelineModule} from 'primeng/timeline';
 import {BadgeModule} from "primeng/badge";
@@ -31,8 +31,7 @@ import "./js/lenis.js";
     HeadingCardComponent,
     SkillsCardComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
 

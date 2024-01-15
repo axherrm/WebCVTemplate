@@ -68,28 +68,4 @@
     }
   }
 
-  .card-stack {
-    skill-card2 {
-      &:not(:first-child) {
-        margin-left: -7rem;
-      }
-      //&:nth-child(n + 1) {
-      //  z-index: 100 - n;
-      //}
-    }
-  }
-
-  skill-card2 {
-    @for $i from 1 through 20 {
-      &:nth-child(#{$i}) {
-        --nth-child: #{$i};
-      }
-    }
-    z-index: calc(100 - var(--nth-child));
-  }
-
-  skill-card2:hover {
-    z-index: 100;
-  }
-
 }
