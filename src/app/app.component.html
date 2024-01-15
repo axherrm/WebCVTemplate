@@ -60,7 +60,7 @@
       </ng-template>
     </p-timeline>
 
-    <heading-card [heading]="dataService.languagePack.skills" type="light" styleClass="alarm-clock-animated"></heading-card>
+    <heading-card [heading]="dataService.languagePack.skills" type="3" styleClass="alarm-clock-animated"></heading-card>
     <div style="width: var(--main-content-width); margin: 0 var(--main-content-side-margin); display: flex; flex-direction: column; flex-wrap: nowrap; gap: 1rem">
       <skills-card class="alarm-clock-animated" *ngFor="let skillCategory of dataService.skillCategories" [category]="skillCategory"></skills-card>
     </div>

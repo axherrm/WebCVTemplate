@@ -14,14 +14,24 @@ export class HeadingCardComponent {
 
   @Input() heading: string;
 
-  @Input() type: "light" | "dark" = "dark";
+  @Input() type: "light" | "dark" | "3" = "dark";
 
   @Input() styleClass: string = "";
 
   cardStyleClass: string;
 
   ngAfterContentInit() {
-    this.cardStyleClass = this.type==='light' ? 'heading-card-light' : 'heading-card-dark';
+    switch (this.type) {
+      case "light":
+        this.cardStyleClass = "heading-card-light";
+        break;
+      case "3":
+        this.cardStyleClass = "heading-card-3";
+        break;
+      default:
+        this.cardStyleClass = "heading-card-dark";
+        break;
+    }
     if (this.styleClass.length > 0) {
       this.cardStyleClass += " " + this.styleClass;
     }
