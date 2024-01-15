@@ -30,6 +30,7 @@
   height: 17rem;
   transition: all 0.3s ease-in-out;
   position: relative;
+  cursor: pointer;
 
   transform-style: preserve-3d;
   animation: rotate-back 1s ease-in-out forwards;
@@ -41,6 +42,10 @@
     width: 13.2rem;
     height: 20.4rem;
     margin: -1.7rem -1.1rem;
+
+    .card-content {
+      box-shadow: 0 0 50px -20px #ffffff;
+    }
 
     .skill-title {
       margin: 2.04rem 0 0;
@@ -142,6 +147,16 @@ circle-progress {
     fill: var(--circle-text);
   }
 }
+
+// TODO remove
+//.background {
+//  position: fixed;
+//  display: none;
+//  top: 0;
+//  left: 0;
+//  width: 100vw;
+//  height: 100vh;
+//}
 
 @keyframes rotate {
   0% {
