@@ -1,0 +1,145 @@
+:host {
+  @for $i from 1 through 20 {
+    &:nth-child(#{$i}) {
+      --nth-child: #{$i};
+    }
+  }
+  transition: z-index 0.3s ease-in-out;
+  z-index: calc(100 - var(--nth-child));
+  &:hover {
+    z-index: 100;
+  }
+}
+
+.container {
+  width: 11rem;
+  height: 17rem;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+
+  .animation-container {
+    height: 100%;
+    width: 100%;
+    transform-style: preserve-3d;
+    animation: rotate-back 1s ease-in-out forwards;
+    &.card-rotated {
+      animation: rotate 1s ease-in-out forwards;
+    }
+  }
+
+
+
+  &:hover {
+    transform: scale(1.2);
+
+    circle-progress::part(circle) {
+      stroke-width: 0.2rem;
+    }
+
+    & + .skill-card,
+    & ~ .skill-card {
+      // TODO remove
+      //background-color: red;
+    }
+  }
+
+  &:has(+ .skill-card:hover) {
+    // TODO remove
+    //background-color: red;
+  }
+}
+
+.card-content {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background: #000000;
+  border: 2px solid wheat;
+  border-radius: 1.5rem;
+  top: 0;
+  left: 0;
+  padding: 1.25rem;
+  backface-visibility: hidden;
+  transition: all 0.3s ease-in-out;
+
+  .skill-title {
+    text-align: center;
+    margin: 1.7rem 0 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &.back {
+    color: white;
+    font-size: 0.8rem;
+    text-align: justify;
+    padding: 0.67rem;
+    span {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      // required for text-overflow: ellipsis to work without whitespace: nowrap
+      display: -webkit-box;
+      -webkit-line-clamp: 16; // needs to be adjusted to max-height
+      -webkit-box-orient: vertical;
+    }
+  }
+}
+
+circle-progress {
+  margin-top: 0.5rem;
+  width: 100%;
+  height: auto;
+
+  &::part(base) {
+    width: 100%;
+    height: auto;
+  }
+
+  &::part(value) {
+    stroke-width: 0.4rem;
+    stroke: #cb1bd2;
+    stroke-linecap: round;
+  }
+
+  &::part(circle) {
+    stroke: #000000;
+    stroke-width: 1rem;
+    transition: all 0.3s ease-in-out;
+    fill: white;
+  }
+
+  &::part(text) {
+    //font-family: "Georgia", serif;
+    font-weight: 600;
+    font-size: 0.8rem;
+    fill: #cb1bd2;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(20deg);
+  }
+  100% {
+    transform: rotateY(-180deg);
+  }
+}
+@keyframes rotate-back {
+  0% {
+    transform: rotateY(-180deg);
+  }
+  50% {
+    transform: rotateY(-200deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}

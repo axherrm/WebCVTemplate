@@ -18,14 +18,14 @@
       alt="" style="min-width:100vw; min-height:100vh; width: auto; height: auto; object-fit: cover;"/>
   </div>
 
-  <div #lang_selector style="right: calc(2vh + 64px); top: 2vh; position: fixed; z-index: 1000">
+  <div #lang_selector style="right: calc(2vh + 64px); top: 2vh; position: fixed; z-index: 1000; display: var(--display-side-elements)">
     <p-speedDial [model]="dataService.languagesMenuItems" direction="down" showIcon="pi pi-language" class="language-speed-dial" buttonClassName="language-button"></p-speedDial>
   </div>
 
   <div style="position:relative; top: -30vh; display: table; height: 130vh; width: 100vw;">
     <div style="display: table-cell; vertical-align: middle; text-align: center;">
-      <h1 id="main-heading">Axel Herrmann</h1>
-      <h2 id="main-subheading">Software Engineer</h2>
+      <h1 id="main-heading" [innerHTML]="dataService.languagePack.heading"></h1>
+      <h2 id="main-subheading" [innerHTML]="dataService.languagePack.subheading"></h2>
     </div>
   </div>
 
@@ -59,5 +59,10 @@
         <p-badge [value]="experienceItem.date" size="large" styleClass="timeline-date-light alarm-clock-animated"></p-badge>
       </ng-template>
     </p-timeline>
+
+    <heading-card [heading]="dataService.languagePack.skills" type="3" styleClass="alarm-clock-animated"></heading-card>
+    <div style="width: var(--main-content-width); margin: 0 var(--main-content-side-margin); display: flex; flex-direction: column; flex-wrap: nowrap; gap: 1rem">
+      <skills-card class="alarm-clock-animated" *ngFor="let skillCategory of dataService.skillCategories" [category]="skillCategory"></skills-card>
+    </div>
   </div>
 </main>

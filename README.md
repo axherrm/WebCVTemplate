@@ -7,10 +7,10 @@ See the newest deployed version at https://axherrm.github.io/CV/
 
 All data displayed on the CV is stored in [src/data].  
 Use the following steps to insert your own data:
-> ### 1. [languages.json]
+> ### 1. [general.json]
 > 
 > This file contains a definition of the languages that can be used in the CV as well as a definition of section headings etc. for each language.
-> if all languages you want to use are defined you only need to adjust the languages array.
+> If all languages you want to use are defined you only need to adjust the languages array.
 > 
 > | Field                 | Description                                                                                 |
 > |-----------------------|---------------------------------------------------------------------------------------------|
@@ -34,5 +34,5 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 [src/data]: src/data
-[languages.json]: src/data/languages.json
+[general.json]: src/data/general.json
 [model.ts]: src/app/data/model.ts

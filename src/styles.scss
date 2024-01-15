@@ -41,12 +41,14 @@ html {
   --border-dark: 1px solid #232323;
   --background-light: rgba(255, 255, 255, 0.8);
   --background-dark: rgba(75, 75, 75, 0.9);
-}
 
-.text {
-  color: var(--color-grey-dark-2);
-  font-size: var(--text-font-size);
-  font-weight: 50;
-  text-align: justify;
-  line-height: 3.2vh;
+  @media (max-width: 1000px) {
+    --main-content-width: 100vw;
+    --display-side-elements: none;
+  }
+  @media (min-width: 1000px) {
+    --main-content-width: max(60vw, 1000px);
+    --display-side-elements: block;
+  }
+  --main-content-side-margin: calc((100vw - var(--main-content-width)) / 2);
 }

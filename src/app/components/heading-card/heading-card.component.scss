@@ -18,4 +18,11 @@
     background: rgb(75,75,75);
     color: white;
   }
+
+  .heading-card-3 {
+    @extend .heading-card;
+    background: #262626;
+    color: wheat;
+    border-radius: 20px;
+  }
 }

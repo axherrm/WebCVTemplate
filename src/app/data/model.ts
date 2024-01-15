@@ -15,7 +15,22 @@ export interface ExperienceItem extends TimelineItem {
 }
 
 export interface Skill {
+  id: string;
+  name: string;
+  rating: number;
+  text: string;
+  subSkills?: string[];
+}
 
+export interface SkillCategory {
+  id: string;
+  name: string;
+  description: string;
+  icon: string;
+  /**
+   * Maximum of 20 skills is supported.
+   */
+  skills: Skill[];
 }
 
 export interface LanguagePack {
@@ -29,6 +44,8 @@ export interface LanguagePack {
    * Use <a href="https://www.iso.org/obp/ui/#search/code/">ISO 3166-1-alpha-2 code</a> of the desired flag.
    */
   isoAlpha2: string;
+  heading: string;
+  subheading: string;
   education: string;
   experience: string;
   skills: string;

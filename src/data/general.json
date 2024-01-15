@@ -5,6 +5,8 @@
     "id": "de",
     "name": "Deutsch",
     "isoAlpha2": "de",
+    "heading": "Axel Herrmann",
+    "subheading": "Software Engineer",
     "education": "Bildungsweg",
     "experience": "Erfahrung",
     "skills": "Kenntnisse"
@@ -13,6 +15,8 @@
     "id": "en",
     "name": "English",
     "isoAlpha2": "us",
+    "heading": "Axel Herrmann",
+    "subheading": "Software Engineer",
     "education": "Education",
     "experience": "Experience",
     "skills": "Skills"

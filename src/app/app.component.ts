@@ -1,15 +1,16 @@
 import {Component, ElementRef, ViewChild} from '@angular/core';
 import {CommonModule, NgOptimizedImage} from '@angular/common';
 import {TimelineModule} from 'primeng/timeline';
-import {CardModule} from "primeng/card";
-import {ButtonModule} from "primeng/button";
 import {BadgeModule} from "primeng/badge";
 import gsap from 'gsap';
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import {DataService} from "./data/data.service";
 import {SpeedDialModule} from "primeng/speeddial";
+import {OverlayPanelModule} from "primeng/overlaypanel";
+import 'js-circle-progress';
 import {TimelineCardComponent} from "./components/timeline-card/timeline-card.component";
 import {HeadingCardComponent} from "./components/heading-card/heading-card.component";
+import {SkillsCardComponent} from "./components/skills-card/skills-card.component";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -18,7 +19,17 @@ import "./js/lenis.js";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, NgOptimizedImage, TimelineModule, CardModule, ButtonModule, BadgeModule, SpeedDialModule, TimelineCardComponent, HeadingCardComponent],
+  imports: [
+    CommonModule,
+    NgOptimizedImage,
+    TimelineModule,
+    BadgeModule,
+    SpeedDialModule,
+    OverlayPanelModule,
+    // Custom
+    TimelineCardComponent,
+    HeadingCardComponent,
+    SkillsCardComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -27,6 +38,7 @@ export class AppComponent {
   @ViewChild("background", {read: ElementRef}) background: ElementRef;
   @ViewChild("education_card", {read: ElementRef}) educationCard: ElementRef;
   @ViewChild("lang_selector", {read: ElementRef}) langSelector: ElementRef;
+  @ViewChild("skills_container", {read: ElementRef}) skillsContainer: ElementRef;
 
   dataService: DataService;
 
@@ -36,7 +48,6 @@ export class AppComponent {
 
   ngAfterViewInit(): void {
     this.addLangButtonAnimation();
-    // this.addAlarmClockAnimation(this.educationCard.nativeElement.children[0]);
     // @ts-ignore
     for (let el of document.getElementsByClassName("alarm-clock-animated")) {
       this.addAlarmClockAnimation(el);
@@ -106,4 +117,5 @@ export class AppComponent {
       transformPerspective: "1400px",
     })
   }
+
 }

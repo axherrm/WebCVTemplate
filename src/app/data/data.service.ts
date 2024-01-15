@@ -1,8 +1,9 @@
 import {Injectable} from '@angular/core';
 import * as educationJson from '../../data/education.json';
-import * as languagesJson from '../../data/languages.json';
+import * as generalJson from '../../data/general.json';
 import * as experienceJson from '../../data/experience.json';
-import {EducationItem, ExperienceItem, LanguagePack} from "./model";
+import * as skillsJson from '../../data/skills.json';
+import {EducationItem, ExperienceItem, LanguagePack, Skill, SkillCategory} from "./model";
 import {MenuItem} from "primeng/api";
 
 @Injectable({
@@ -10,14 +11,16 @@ import {MenuItem} from "primeng/api";
 })
 export class DataService {
 
-  defaultLang: string = languagesJson.defaultLanguage;
-  loadedLanguages: string[] = languagesJson.languages;
+  defaultLang: string = generalJson.defaultLanguage;
+  loadedLanguages: string[] = generalJson.languages;
   languagesMenuItems: MenuItem[] = [];
 
   lang: string;
   languagePack: LanguagePack;
   education: EducationItem[];
   experience: ExperienceItem[];
+  skillCategories: SkillCategory[];
+  skills: Skill[];
 
   constructor() {
     this.determineLanguage();
@@ -28,9 +31,15 @@ export class DataService {
     // @ts-ignore
     this.education = educationJson[this.lang];
     // @ts-ignore
-    this.languagePack = languagesJson[this.lang];
+    this.languagePack = generalJson[this.lang];
     // @ts-ignore
     this.experience = experienceJson[this.lang];
+    // @ts-ignore
+    this.skillCategories = skillsJson[this.lang];
+    this.skills = [];
+    for (let skillCategory of this.skillCategories) {
+      this.skills = this.skills.concat(skillCategory.skills);
+    }
     this.fillLanguageButton();
   }
 
@@ -55,7 +64,7 @@ export class DataService {
     this.languagesMenuItems = [];
     for (const lang of this.loadedLanguages) {
       // @ts-ignore
-      const langPack: LanguagePack = languagesJson[lang];
+      const langPack: LanguagePack = generalJson[lang];
       let flagActive: string = "";
       if (lang === this.lang) {
         flagActive = " flag-active";
