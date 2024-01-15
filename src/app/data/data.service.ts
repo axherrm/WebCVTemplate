@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import * as educationJson from '../../data/education.json';
-import * as languagesJson from '../../data/languages.json';
+import * as generalJson from '../../data/general.json';
 import * as experienceJson from '../../data/experience.json';
 import * as skillsJson from '../../data/skills.json';
 import {EducationItem, ExperienceItem, LanguagePack, Skill, SkillCategory} from "./model";
@@ -11,8 +11,8 @@ import {MenuItem} from "primeng/api";
 })
 export class DataService {
 
-  defaultLang: string = languagesJson.defaultLanguage;
-  loadedLanguages: string[] = languagesJson.languages;
+  defaultLang: string = generalJson.defaultLanguage;
+  loadedLanguages: string[] = generalJson.languages;
   languagesMenuItems: MenuItem[] = [];
 
   lang: string;
@@ -31,7 +31,7 @@ export class DataService {
     // @ts-ignore
     this.education = educationJson[this.lang];
     // @ts-ignore
-    this.languagePack = languagesJson[this.lang];
+    this.languagePack = generalJson[this.lang];
     // @ts-ignore
     this.experience = experienceJson[this.lang];
     // @ts-ignore
@@ -64,7 +64,7 @@ export class DataService {
     this.languagesMenuItems = [];
     for (const lang of this.loadedLanguages) {
       // @ts-ignore
-      const langPack: LanguagePack = languagesJson[lang];
+      const langPack: LanguagePack = generalJson[lang];
       let flagActive: string = "";
       if (lang === this.lang) {
         flagActive = " flag-active";

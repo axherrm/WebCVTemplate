@@ -44,6 +44,8 @@ export interface LanguagePack {
    * Use <a href="https://www.iso.org/obp/ui/#search/code/">ISO 3166-1-alpha-2 code</a> of the desired flag.
    */
   isoAlpha2: string;
+  heading: string;
+  subheading: string;
   education: string;
   experience: string;
   skills: string;
