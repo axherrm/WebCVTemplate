@@ -1,4 +1,4 @@
-<main>
+<main #outest_container>
   <div #background style="width: 100vw; height: 100vh; display: flex; position: fixed; z-index: -100">
 <!--    <img-->
 <!--      srcset= "../assets/avatar_600.png 600w,-->
@@ -17,6 +17,8 @@
       ngSrc="./assets/avatar/" ngSrcset="600w, 1000w, 1500w, 2000w, 2500w, 3000w, 6000w"
       alt="" style="min-width:100vw; min-height:100vh; width: auto; height: auto; object-fit: cover;"/>
   </div>
+
+  <div class="progressbar-container"><div #progress_bar class="progressbar"></div></div>
 
   <div #lang_selector style="right: calc(2vh + 64px); top: 2vh; position: fixed; z-index: 1000; display: var(--display-side-elements)">
     <p-speedDial [model]="dataService.languagesMenuItems" direction="down" showIcon="pi pi-language" class="language-speed-dial" buttonClassName="language-button"></p-speedDial>

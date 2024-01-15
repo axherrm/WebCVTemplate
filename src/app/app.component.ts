@@ -36,9 +36,10 @@ import "./js/lenis.js";
 export class AppComponent {
 
   @ViewChild("background", {read: ElementRef}) background: ElementRef;
+  @ViewChild("outest_container", {read: ElementRef}) outestContainer: ElementRef;
+  @ViewChild("progress_bar", {read: ElementRef}) progressBar: ElementRef;
   @ViewChild("education_card", {read: ElementRef}) educationCard: ElementRef;
   @ViewChild("lang_selector", {read: ElementRef}) langSelector: ElementRef;
-  @ViewChild("skills_container", {read: ElementRef}) skillsContainer: ElementRef;
 
   dataService: DataService;
 
@@ -52,6 +53,23 @@ export class AppComponent {
     for (let el of document.getElementsByClassName("alarm-clock-animated")) {
       this.addAlarmClockAnimation(el);
     }
+    this.addProgressBarAnimation();
+  }
+
+  addProgressBarAnimation() {
+    const tl: gsap.core.Timeline = gsap.timeline({
+      scrollTrigger: {
+        start: "top top",
+        trigger: this.outestContainer.nativeElement,
+        end: "bottom bottom",
+        scrub: true,
+      }
+    });
+    tl.fromTo(this.progressBar.nativeElement, {
+      transform: "scaleX(0)"
+    }, {
+      transform: "scaleX(1)"
+    })
   }
 
   addLangButtonAnimation() {
