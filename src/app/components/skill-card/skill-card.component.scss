@@ -1,17 +1,20 @@
 :host {
   // color vars:
   // OLD:
-  --background: #000000;
-  --circle-background: white;
-  --circle-text: #cb1bd2;
-  --circle-stroke: #cb1bd2;
+  //--background: #000000;
+  //--circle-background: white;
+  //--circle-text: #cb1bd2;
+  //--circle-stroke: #cb1bd2;
+  //--circle-background-stroke-width: 1rem;
+  //--stroke-width: 0.4rem;
 
   // Variant 1 NEW:
-  //--background: white;
-  //--circle-background: #262626;
-  //--circle-text: white;
-  //--circle-stroke: #cb1bd2;
-
+  --background: white;
+  --circle-background: #262626;
+  --circle-text: white;
+  --circle-stroke: #e134e8;
+  --circle-background-stroke-width: 19%;
+  --stroke-width: 0.4rem;
 
   @for $i from 1 through 20 {
     &:nth-child(#{$i}) {
@@ -36,6 +39,11 @@
   animation: rotate-back 1s ease-in-out forwards;
   &.card-rotated {
     animation: rotate 1s ease-in-out forwards;
+    //position: fixed;
+    //top: 20vh;
+    //left: 20vw;
+    //width: 60vw;
+    //height: 60vh;
   }
 
   &:hover {
@@ -124,7 +132,7 @@ circle-progress {
   }
 
   &::part(value) {
-    stroke-width: 0.4rem;
+    stroke-width: var(--stroke-width);
     //stroke: #cb1bd2;
     stroke: var(--circle-stroke);
     stroke-linecap: round;
@@ -133,7 +141,7 @@ circle-progress {
   &::part(circle) {
     //stroke: #000000;
     stroke: var(--background);
-    stroke-width: 1rem;
+    stroke-width: var(--circle-background-stroke-width);
     transition: all 0.3s ease-in-out;
     //fill: white;
     fill: var(--circle-background);
@@ -147,16 +155,6 @@ circle-progress {
     fill: var(--circle-text);
   }
 }
-
-// TODO remove
-//.background {
-//  position: fixed;
-//  display: none;
-//  top: 0;
-//  left: 0;
-//  width: 100vw;
-//  height: 100vh;
-//}
 
 @keyframes rotate {
   0% {
