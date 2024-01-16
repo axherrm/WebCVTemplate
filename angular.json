@@ -56,7 +56,8 @@
               "src/favicon-32x32.png",
               "src/site.webmanifest",
               "src/assets",
-              "src/data"
+              "src/data",
+              "src/googlecbf22a41e90209ec.html"
             ],
             "styles": [
               "src/styles.scss",
@@ -124,7 +125,8 @@
               "src/favicon-32x32.png",
               "src/site.webmanifest",
               "src/assets",
-              "src/data"
+              "src/data",
+              "src/googlecbf22a41e90209ec.html"
             ],
             "styles": [
               "src/styles.scss",
