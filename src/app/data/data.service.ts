@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import {EventEmitter, Injectable} from '@angular/core';
 import * as educationJson from '../../data/education.json';
 import * as generalJson from '../../data/general.json';
 import * as experienceJson from '../../data/experience.json';
@@ -21,6 +21,8 @@ export class DataService {
   experience: ExperienceItem[];
   skillCategories: SkillCategory[];
   skills: Skill[];
+
+  langChange: EventEmitter<void> = new EventEmitter<void>(true);
 
   constructor() {
     this.determineLanguage();
@@ -72,7 +74,10 @@ export class DataService {
       this.languagesMenuItems.push({
         id: langPack.id,
         icon: `fi fis fi-${langPack.isoAlpha2} flag-icon${flagActive}`,
-        command: () => this.setLang(lang)
+        command: () => {
+          this.setLang(lang);
+          this.langChange.emit();
+        }
       })
     }
 

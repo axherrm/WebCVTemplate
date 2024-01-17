@@ -43,17 +43,31 @@ export class AppComponent {
 
   dataService: DataService;
 
+  alarmClockTimelines: gsap.core.Timeline[] = [];
+
   constructor(dataService: DataService) {
     this.dataService = dataService;
+    this.dataService.langChange.subscribe(() => this.onLangChange());
   }
 
   ngAfterViewInit(): void {
     this.addLangButtonAnimation();
+    this.addProgressBarAnimation();
     // @ts-ignore
     for (let el of document.getElementsByClassName("alarm-clock-animated")) {
       this.addAlarmClockAnimation(el);
     }
-    this.addProgressBarAnimation();
+  }
+
+  onLangChange() {
+    this.alarmClockTimelines.forEach(tl => tl.kill());
+    this.alarmClockTimelines = [];
+
+    let objectsToAnimate = document.getElementsByClassName("alarm-clock-animated");
+    // @ts-ignore
+    for (let el of objectsToAnimate) {
+      this.addAlarmClockAnimation(el);
+    }
   }
 
   addProgressBarAnimation() {
@@ -134,6 +148,7 @@ export class AppComponent {
       rotationX: "30deg",
       transformPerspective: "1400px",
     })
+    this.alarmClockTimelines.push(bottomHalfTl, upperHalfTl);
   }
 
 }
