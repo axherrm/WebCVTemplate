@@ -1,5 +1,20 @@
-@use 'style/language';
+@use 'style/language-selector';
 @use 'style/lenis';
+
+#background-img {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -100;
+  display: flex;
+  img {
+    min-width:100vw;
+    min-height:100vh;
+    width: auto;
+    height: auto;
+    object-fit: cover;
+  }
+}
 
 #main-heading {
   color: #ffffff;
@@ -38,6 +53,13 @@
     transform-origin: 0 50%;
     background-image: linear-gradient(to right, #a445b2, #fa4299);
   }
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
 }
 
 :host ::ng-deep {

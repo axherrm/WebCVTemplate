@@ -1,5 +1,5 @@
 <main #outest_container>
-  <div #background style="width: 100vw; height: 100vh; display: flex; position: fixed; z-index: -100">
+  <div #backgroundImg id="background-img">
 <!--    <img-->
 <!--      srcset= "../assets/avatar_600.png 600w,-->
 <!--               ../assets/avatar_1000x533.png 1000w,-->
@@ -13,25 +13,24 @@
 <!--      alt=""-->
 <!--      style="min-width:100vw; min-height:100vh; width: auto; height: auto; object-fit: cover;"-->
 <!--    />-->
-    <img width="6000" height="3200"
-      ngSrc="./assets/avatar/" ngSrcset="600w, 1000w, 1500w, 2000w, 2500w, 3000w, 6000w"
-      alt="" style="min-width:100vw; min-height:100vh; width: auto; height: auto; object-fit: cover;"/>
+    <img width="6000" height="3200" alt="" ngSrc="./assets/avatar/"
+         ngSrcset="600w, 1000w, 1500w, 2000w, 2500w, 3000w, 6000w"/>
   </div>
 
   <div class="progressbar-container"><div #progress_bar class="progressbar"></div></div>
 
-  <div #lang_selector style="right: calc(2vh + 64px); top: 2vh; position: fixed; z-index: 1000; display: var(--display-side-elements)">
+  <div #lang_selector id="lang-selector">
     <p-speedDial [model]="dataService.languagesMenuItems" direction="down" showIcon="pi pi-language" class="language-speed-dial" buttonClassName="language-button"></p-speedDial>
   </div>
 
-  <div style="position:relative; top: -30vh; display: table; height: 130vh; width: 100vw;">
-    <div style="display: table-cell; vertical-align: middle; text-align: center;">
-      <h1 id="main-heading" [innerHTML]="dataService.languagePack.heading"></h1>
-      <h2 id="main-subheading" [innerHTML]="dataService.languagePack.subheading"></h2>
+  <div class="content-container">
+    <div style="position:relative; top: -30vh; display: table; height: 130vh; width: 100vw;">
+      <div style="display: table-cell; vertical-align: middle; text-align: center;">
+        <h1 id="main-heading" [innerHTML]="dataService.languagePack.heading"></h1>
+        <h2 id="main-subheading" [innerHTML]="dataService.languagePack.subheading"></h2>
+      </div>
     </div>
-  </div>
 
-  <div style="text-align: center; display: flex; flex-direction: column; align-items: center">
     <heading-card #education_card [heading]="dataService.languagePack.education" type="light" styleClass="alarm-clock-animated"></heading-card>
     <p-timeline id="eduction-tl" [value]="dataService.education" align="alternate" [style]="{'width': '70%', 'display': 'inline-block'}">
       <ng-template pTemplate="marker">

@@ -35,7 +35,7 @@ import "./js/lenis.js";
 })
 export class AppComponent {
 
-  @ViewChild("background", {read: ElementRef}) background: ElementRef;
+  @ViewChild("backgroundImg", {read: ElementRef}) backgroundImage: ElementRef;
   @ViewChild("outest_container", {read: ElementRef}) outestContainer: ElementRef;
   @ViewChild("progress_bar", {read: ElementRef}) progressBar: ElementRef;
   @ViewChild("education_card", {read: ElementRef}) educationCard: ElementRef;
@@ -92,17 +92,20 @@ export class AppComponent {
         start: "top 90%",
         trigger: this.educationCard.nativeElement,
         end: "top top",
-        // markers: true, // TODO remove
         scrub: true,
       }
     });
     tl
-      .to(this.background.nativeElement, {
+      .to(this.backgroundImage.nativeElement, {
         filter: "blur(2px)"
       })
-      .from(this.langSelector.nativeElement, {
+      .fromTo(this.langSelector.nativeElement, {
         opacity: 0,
-        ease: "power1.in"
+        ease: "power1.in",
+        display: "none"
+      }, {
+        display: "var(--display-side-elements)",
+        opacity: 1,
       }, "<");
   }
 
