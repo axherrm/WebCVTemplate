@@ -7,9 +7,11 @@
     "isoAlpha2": "de",
     "heading": "Axel Herrmann",
     "subheading": "Software Engineer",
+    "home": "Home",
     "education": "Bildungsweg",
     "experience": "Erfahrung",
-    "skills": "Kenntnisse"
+    "skills": "Kenntnisse",
+    "about": "Über"
   },
   "en": {
     "id": "en",
@@ -17,8 +19,10 @@
     "isoAlpha2": "us",
     "heading": "Axel Herrmann",
     "subheading": "Software Engineer",
+    "home": "Home",
     "education": "Education",
     "experience": "Experience",
-    "skills": "Skills"
+    "skills": "Skills",
+    "about": "About"
   }
 }

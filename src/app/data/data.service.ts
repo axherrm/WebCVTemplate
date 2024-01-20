@@ -33,7 +33,7 @@ export class DataService {
     // @ts-ignore
     this.education = educationJson[this.lang];
     // @ts-ignore
-    this.languagePack = generalJson[this.lang];
+    this.languagePack = new LanguagePack(generalJson[this.lang]);
     // @ts-ignore
     this.experience = experienceJson[this.lang];
     // @ts-ignore
