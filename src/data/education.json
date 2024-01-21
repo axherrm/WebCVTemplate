@@ -1,28 +1,31 @@
 {
   "de": [
     {
-      "heading": "Grundschule",
-      "subheading": "Berkenschule Holzgerlingen",
+      "heading": "Heading",
+      "subheading": "Subheading",
       "date": "09/2008 – 07/2012",
-      "content": "In der Grundschule hatte ich zwar noch keine Berührungen mit Informatik oder technischen Themen, doch Mathe hat sich schnell als mein Lieblingsfach herausgestellt."
+      "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+      "bulletPoints": [
+        "badge"
+      ]
     },
     {
-      "heading": "Allgemeine Hochschulreife",
-      "subheading": "Schönbuch-Gymnasium Holzgerlingen",
-      "date": "09/2012 – 07/2020",
+      "heading": "Heading",
+      "subheading": "Subheading",
+      "date": "09/2008 – 07/2012",
+      "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
       "bulletPoints": [
-        "Abschlussnote: 1,4"
-      ],
-      "content": "Neben der allgemeinen Bildung habe ich hier meine ersten Erfahrungen in der Informatik sammeln können. Ab der Oberstufe habe ich Informatikunterricht besucht."
+        "badge"
+      ]
     },
     {
-      "heading": "Software Engineering B.Sc.",
-      "subheading": "Universität Stuttgart",
-      "date": "10/2020 – 04/2023",
+      "heading": "Heading",
+      "subheading": "Subheading",
+      "date": "09/2008 – 07/2012",
+      "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
       "bulletPoints": [
-        "Voraussichtliche Abschlussnote: 2.0"
-      ],
-      "content": "In Abgrenzung zum verwandten Studiengang Informatik konnte ich hier einige praktische Erfahrungen mehr sammeln. Diese kleinen Programmierprojekte konnten mich im Studium bisher am meisten begeistern."
+        "badge"
+      ]
     }
   ],
   "en": [

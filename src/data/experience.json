@@ -1,28 +1,28 @@
 {
   "de": [
     {
-      "heading": "Teilnahme am #IoT Hackathon",
-      "subheading": "Schönbuch-Gymnasium Holzgerlingen",
+      "heading": "Heading",
+      "subheading": "Subheading",
       "date": "2018",
-      "content": "Im Rahmen des Hackathon habe ich das erste Mal etwas praktischere Erfahrungen in der Softwareentwicklung gesammelt."
+      "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
     },
     {
-      "heading": "Entwicklung Verwaltungssoftware SaS",
-      "subheading": "Schönbuch-Gymnasium Holzgerlingen",
-      "date": "2018 – 2019",
-      "content": "Dank meines Informatik-Lehrers habe ich als einziger Schüler die Möglichkeit bekommen, mit an der Verwaltungssoftware für das Schulprojekt „Schule als Staat“ zu entwickeln. Dabei wurde eine Webseite in PHP realisiert."
+      "heading": "Heading",
+      "subheading": "Subheading",
+      "date": "2018",
+      "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
     },
     {
-      "heading": "Werkstudent Software Developer",
-      "subheading": "levigo solutions, Holzgerlingen",
-      "date": "01/2022 – 09/2023",
-      "content": "Im Rahmen dieser Anstellung hatte ich das erste Mal die Gelegenheit, professionelle praktische Erfahrungen zu sammeln. Ich habe größtenteils am Backend des Produkts jadice flow gearbeitet. Dabei habe ich viel in Java und SpringBoot, teilweise auch in Java-/Typescript geschrieben. Aufgrund der Microservices-Architektur des Produkts hatte ich viel Erfahrungen mit Docker gesammelt und erste Einblicke in Kubernetes bekommen. Bei dem agilen Vorgehen in 2–3-wöchigen Sprints habe ich das erste Mal mit Scrum gearbeitet."
+      "heading": "Heading",
+      "subheading": "Subheading",
+      "date": "2018",
+      "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
     },
     {
-      "heading": "Bachelor-Thesis",
-      "subheading": "levigo solutions, Holzgerlingen",
-      "date": "09/2023 – 03/2024",
-      "content": "Insgesamt ein halbes Jahr habe ich bei levigo solutions meine Bachelorthesis über das Thema <i>Refactoring von Microservices- Architekturen: Eine industrielle Fallstudie</i> geschrieben. Dabei habe ich weiter an der Architektur des Produkts jadice flow entwickelt. Die Thesis wird in Zukunft öffentlich zu finden sein."
+      "heading": "Heading",
+      "subheading": "Subheading",
+      "date": "2018",
+      "content": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
     }
   ],
   "en": [

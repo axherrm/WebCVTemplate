@@ -5,11 +5,11 @@
     "id": "de",
     "name": "Deutsch",
     "isoAlpha2": "de",
-    "heading": "Axel Herrmann",
-    "subheading": "Software Engineer",
-    "education": "Bildungsweg",
-    "experience": "Erfahrung",
-    "skills": "Kenntnisse"
+    "heading": "Title Of Website",
+    "subheading": "Subtitle",
+    "education": "Section 1",
+    "experience": "Section 2",
+    "skills": "Section 3"
   },
   "en": {
     "id": "en",
