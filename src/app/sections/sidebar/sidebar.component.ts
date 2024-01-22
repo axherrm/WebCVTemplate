@@ -30,7 +30,7 @@ export class SidebarComponent {
   @Input({required: true}) sections: Section[];
   @Input({required: true}) languagesMenuItems: MenuItem[];
 
-  @Output() hovered: boolean = false;
+  // @Output() hovered: boolean = false;
 
   @ViewChildren("navbar_dot", {read: NavbarDotComponent}) dots: QueryList<NavbarDotComponent>;
 
@@ -46,10 +46,10 @@ export class SidebarComponent {
     this.addSelectedAnimation();
   }
 
-  @HostListener("mouseleave")
-  onMouseleave() {
-    this.hovered = false;
-  }
+  // @HostListener("mouseleave")
+  // onMouseleave() {
+  //   this.hovered = false;
+  // }
 
   addSelectedAnimation() {
     for (let i = 0; i < this.sections.length; i++) {

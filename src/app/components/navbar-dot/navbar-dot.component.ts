@@ -16,30 +16,30 @@ export class NavbarDotComponent {
 
   @Input({required: true}) section: Section;
 
-  @HostBinding('class.extended')
-  @Input()
-  extended = false;
+  // @HostBinding('class.extended')
+  // @Input()
+  // extended = false;
 
   @HostBinding('class.active')
   @Input()
   active = false;
 
-  @Output() hover: EventEmitter<void> = new EventEmitter<void>();
+  // @Output() hover: EventEmitter<void> = new EventEmitter<void>();
 
   delayTimeout: any;
 
-  @HostListener("mouseenter")
-  onMouseover() {
-    this.delayTimeout = setTimeout(() => this.hover.emit(), 300);
-  }
+  // @HostListener("mouseenter")
+  // onMouseover() {
+  //   this.delayTimeout = setTimeout(() => this.hover.emit(), 300);
+  // }
 
   /**
    * In case the hovering stops before delay timeout is over, the hovering is not forwarded.
    */
-  @HostListener("mouseleave")
-  onMouseleave() {
-    clearTimeout(this.delayTimeout);
-  }
+  // @HostListener("mouseleave")
+  // onMouseleave() {
+  //   clearTimeout(this.delayTimeout);
+  // }
 
   @HostListener("click")
   onClick() {

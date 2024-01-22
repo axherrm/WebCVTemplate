@@ -67,7 +67,10 @@
   transition: all .6s ease-in-out;
   &.rotated {
     transition: all .4s ease-in-out;
-    transform: rotateY(calc(1 * var(--rotate-angle)));
+    //transform: rotateY(calc(1 * var(--rotate-angle)));
+    //transform: rotateX(70deg);
+    //transform: translateY(-5000px);
+    //transform: scale(0.6);
   }
 }
 

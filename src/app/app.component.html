@@ -29,7 +29,8 @@
   </div>
 
   <div id="perspective-div" style="perspective: 10000px">
-    <div class="content-container" [class.rotated]="sidebar.hovered">
+    <!-- [class.rotated]="sidebar.hovered" -->
+    <div class="content-container">
       <heading-card #education_card id="education-start" [heading]="dataService.languagePack.education" type="light" styleClass="alarm-clock-animated"></heading-card>
       <p-timeline id="eduction-tl" [value]="dataService.education" align="alternate" [style]="{'width': '70%', 'display': 'inline-block'}">
         <ng-template pTemplate="marker">

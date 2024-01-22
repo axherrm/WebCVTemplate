@@ -1,7 +1,7 @@
 <div class="sidebar-container" style="height: 100vh">
   <div id="navbar">
-    <navbar-dot #navbar_dot *ngFor="let section of sections; index as i;" [section]="section"
-                (hover)="hovered = true" [extended]="hovered" [active]="i===sectionActive">
+    <!-- (hover)="hovered = true" [extended]="hovered" -->
+    <navbar-dot #navbar_dot *ngFor="let section of sections; index as i;" [section]="section" [active]="i===sectionActive">
     </navbar-dot>
   </div>
 </div>
