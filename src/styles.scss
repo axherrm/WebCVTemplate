@@ -45,10 +45,37 @@ html {
   @media (max-width: 1000px) {
     --main-content-width: 100vw;
     --display-side-elements: none;
+    --display-side-elements-flex: none;
   }
   @media (min-width: 1000px) {
     --main-content-width: max(60vw, 1000px);
     --display-side-elements: block;
+    --display-side-elements-flex: flex;
   }
   --main-content-side-margin: calc((100vw - var(--main-content-width)) / 2);
+
+  /*******************************************************
+   *               Rotation calculations                 *
+   *******************************************************/
+  /* Input */
+  --side-content-width-visible-percent: calc(4/5);
+
+  /* Calculations */
+  --rotated-depth-percent: calc(sqrt(1 - pow(var(--side-content-width-visible-percent),2)));
+  /* alpha = acos(ancathete / hypotenuse) */
+  --rotate-angle: calc(acos(var(--side-content-width-visible-percent)));
+
+  /*
+    (180 - alpha) / 2
+    => result has to be subtracted from 180 again because of css rotation rules
+  */
+  --side-content-rotation: calc(180deg - (180deg - var(--rotate-angle)) / 2);
+  /*
+    a² = b² + c² - 2bc * cos(alpha)
+    a = √(b² + c² - 2bc * cos(alpha))
+    a = √(1² + 1² - 2 * cos(alpha))
+    a = √(2 - 2cos(alpha))
+  */
+  /*--side-content-length-percent: calc(2 - 2 * sqrt(cos(var(--rotate-angle))));*/
+  --side-content-length-percent: sqrt(2 - 2 * cos(var(--rotate-angle)));
 }

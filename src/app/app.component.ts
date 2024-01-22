@@ -11,6 +11,8 @@ import 'js-circle-progress';
 import {TimelineCardComponent} from "./components/timeline-card/timeline-card.component";
 import {HeadingCardComponent} from "./components/heading-card/heading-card.component";
 import {SkillsCardComponent} from "./components/skills-card/skills-card.component";
+import {NavbarDotComponent} from "./components/navbar-dot/navbar-dot.component";
+import {SidebarComponent} from "./sections/sidebar/sidebar.component";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -29,7 +31,10 @@ import "./js/lenis.js";
     // Custom
     TimelineCardComponent,
     HeadingCardComponent,
-    SkillsCardComponent],
+    SkillsCardComponent,
+    NavbarDotComponent,
+    SidebarComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -38,8 +43,9 @@ export class AppComponent {
   @ViewChild("backgroundImg", {read: ElementRef}) backgroundImage: ElementRef;
   @ViewChild("outest_container", {read: ElementRef}) outestContainer: ElementRef;
   @ViewChild("progress_bar", {read: ElementRef}) progressBar: ElementRef;
+  // @ViewChild("content_container", {read: ElementRef}) contentContainer: ElementRef;
   @ViewChild("education_card", {read: ElementRef}) educationCard: ElementRef;
-  @ViewChild("lang_selector", {read: ElementRef}) langSelector: ElementRef;
+  @ViewChild("sidebar", {read: ElementRef}) sidebar: ElementRef;
 
   dataService: DataService;
 
@@ -51,7 +57,7 @@ export class AppComponent {
   }
 
   ngAfterViewInit(): void {
-    this.addLangButtonAnimation();
+    this.addSidebarAnimation();
     this.addProgressBarAnimation();
     // @ts-ignore
     for (let el of document.getElementsByClassName("alarm-clock-animated")) {
@@ -86,7 +92,7 @@ export class AppComponent {
     })
   }
 
-  addLangButtonAnimation() {
+  addSidebarAnimation() {
     const tl: gsap.core.Timeline = gsap.timeline({
       scrollTrigger: {
         start: "top 90%",
@@ -99,12 +105,12 @@ export class AppComponent {
       .to(this.backgroundImage.nativeElement, {
         filter: "blur(2px)"
       })
-      .fromTo(this.langSelector.nativeElement, {
+      .fromTo(this.sidebar.nativeElement, {
         opacity: 0,
         ease: "power1.in",
         display: "none"
       }, {
-        display: "var(--display-side-elements)",
+        display: "var(--display-side-elements-flex)",
         opacity: 1,
       }, "<");
   }
@@ -115,7 +121,7 @@ export class AppComponent {
         start: "top bottom",
         trigger: el,
         end: "center center",
-        // markers: true, // TODO remove
+        // markers: true,
         scrub: true,
       },
       defaults: {
@@ -127,7 +133,7 @@ export class AppComponent {
         start: "center center",
         trigger: el,
         end: "bottom top",
-        // markers: true, // TODO remove
+        // markers: true,
         scrub: true,
       },
       defaults: {

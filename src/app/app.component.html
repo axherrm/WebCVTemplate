@@ -19,54 +19,56 @@
   </div>
 
   <div class="progressbar-container"><div #progress_bar class="progressbar"></div></div>
+  <sidebar #sidebar [sections]="dataService.languagePack.sections" [languagesMenuItems]="dataService.languagesMenuItems"></sidebar>
 
-  <div #lang_selector id="lang-selector">
-    <p-speedDial [model]="dataService.languagesMenuItems" direction="down" showIcon="pi pi-language" class="language-speed-dial" buttonClassName="language-button"></p-speedDial>
+  <div id="home-start" style="position:relative; top: -30vh; display: table; height: 130vh; width: 100vw;">
+    <div style="display: table-cell; vertical-align: middle; text-align: center;">
+      <h1 id="main-heading" [innerHTML]="dataService.languagePack.heading"></h1>
+      <h2 id="main-subheading" [innerHTML]="dataService.languagePack.subheading"></h2>
+    </div>
   </div>
 
-  <div class="content-container">
-    <div style="position:relative; top: -30vh; display: table; height: 130vh; width: 100vw;">
-      <div style="display: table-cell; vertical-align: middle; text-align: center;">
-        <h1 id="main-heading" [innerHTML]="dataService.languagePack.heading"></h1>
-        <h2 id="main-subheading" [innerHTML]="dataService.languagePack.subheading"></h2>
+  <div id="perspective-div" style="perspective: 10000px">
+    <!-- [class.rotated]="sidebar.hovered" -->
+    <div class="content-container">
+      <heading-card #education_card id="education-start" [heading]="dataService.languagePack.education" type="light" styleClass="alarm-clock-animated"></heading-card>
+      <p-timeline id="eduction-tl" [value]="dataService.education" align="alternate" [style]="{'width': '70%', 'display': 'inline-block'}">
+        <ng-template pTemplate="marker">
+          <span class="dot"></span>
+        </ng-template>
+        <ng-template pTemplate="content" let-educationItem>
+          <timeline-card type="light" [heading]="educationItem.heading" [subheading]="educationItem.subheading"
+                         [content]="educationItem.content" [bulletPoints]="educationItem.bulletPoints" styleClass="alarm-clock-animated">
+          </timeline-card>
+        </ng-template>
+        <ng-template pTemplate="opposite" let-educationItem>
+          <p-badge [value]="educationItem.date" size="large" styleClass="timeline-date-dark alarm-clock-animated"></p-badge>
+        </ng-template>
+      </p-timeline>
+
+      <heading-card id="experience-start" [heading]="dataService.languagePack.experience" type="dark" styleClass="alarm-clock-animated"></heading-card>
+      <p-timeline id="experience-tl" [value]="dataService.experience" align="alternate" [style]="{'width': '70%', 'display': 'inline-block'}">
+        <ng-template pTemplate="marker">
+          <span class="dot"></span>
+        </ng-template>
+        <ng-template pTemplate="content" let-experienceItem>
+          <timeline-card type="dark" [heading]="experienceItem.heading" [subheading]="experienceItem.subheading"
+                         [content]="experienceItem.content" [bulletPoints]="experienceItem.skills" styleClass="alarm-clock-animated">
+          </timeline-card>
+        </ng-template>
+        <ng-template pTemplate="opposite" let-experienceItem>
+          <p-badge [value]="experienceItem.date" size="large" styleClass="timeline-date-light alarm-clock-animated"></p-badge>
+        </ng-template>
+      </p-timeline>
+
+      <heading-card id="skills-start" [heading]="dataService.languagePack.skills" type="3" styleClass="alarm-clock-animated"></heading-card>
+      <div style="width: var(--main-content-width); margin: 0 var(--main-content-side-margin); display: flex; flex-direction: column; flex-wrap: nowrap; gap: 1rem">
+        <skills-card class="alarm-clock-animated" *ngFor="let skillCategory of dataService.skillCategories" [category]="skillCategory"></skills-card>
       </div>
+
+      <heading-card id="about-start" [heading]="dataService.languagePack.about" type="3" styleClass="alarm-clock-animated"></heading-card>
+
+      <div class="spacer" style="width: 100vw; height: 50vh"></div>
     </div>
-
-    <heading-card #education_card [heading]="dataService.languagePack.education" type="light" styleClass="alarm-clock-animated"></heading-card>
-    <p-timeline id="eduction-tl" [value]="dataService.education" align="alternate" [style]="{'width': '70%', 'display': 'inline-block'}">
-      <ng-template pTemplate="marker">
-        <span class="dot"></span>
-      </ng-template>
-      <ng-template pTemplate="content" let-educationItem>
-        <timeline-card type="light" [heading]="educationItem.heading" [subheading]="educationItem.subheading"
-                       [content]="educationItem.content" [bulletPoints]="educationItem.bulletPoints" styleClass="alarm-clock-animated">
-        </timeline-card>
-      </ng-template>
-      <ng-template pTemplate="opposite" let-educationItem>
-        <p-badge [value]="educationItem.date" size="large" styleClass="timeline-date-dark alarm-clock-animated"></p-badge>
-      </ng-template>
-    </p-timeline>
-
-    <heading-card #experience_card [heading]="dataService.languagePack.experience" type="dark" styleClass="alarm-clock-animated"></heading-card>
-    <p-timeline id="experience-tl" [value]="dataService.experience" align="alternate" [style]="{'width': '70%', 'display': 'inline-block'}">
-      <ng-template pTemplate="marker">
-        <span class="dot"></span>
-      </ng-template>
-      <ng-template pTemplate="content" let-experienceItem>
-        <timeline-card type="dark" [heading]="experienceItem.heading" [subheading]="experienceItem.subheading"
-                       [content]="experienceItem.content" [bulletPoints]="experienceItem.skills" styleClass="alarm-clock-animated">
-        </timeline-card>
-      </ng-template>
-      <ng-template pTemplate="opposite" let-experienceItem>
-        <p-badge [value]="experienceItem.date" size="large" styleClass="timeline-date-light alarm-clock-animated"></p-badge>
-      </ng-template>
-    </p-timeline>
-
-    <heading-card [heading]="dataService.languagePack.skills" type="3" styleClass="alarm-clock-animated"></heading-card>
-    <div style="width: var(--main-content-width); margin: 0 var(--main-content-side-margin); display: flex; flex-direction: column; flex-wrap: nowrap; gap: 1rem">
-      <skills-card class="alarm-clock-animated" *ngFor="let skillCategory of dataService.skillCategories" [category]="skillCategory"></skills-card>
-    </div>
-
-    <div class="spacer" style="width: 100vw; height: 50vh"></div>
   </div>
 </main>

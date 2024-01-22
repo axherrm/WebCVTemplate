@@ -33,7 +33,7 @@ export interface SkillCategory {
   skills: Skill[];
 }
 
-export interface LanguagePack {
+export interface ILanguagePack {
   /**
    * This is the identifier which is used in the languages array and for definition of the object.
    */
@@ -46,7 +46,51 @@ export interface LanguagePack {
   isoAlpha2: string;
   heading: string;
   subheading: string;
+  home: string;
   education: string;
   experience: string;
   skills: string;
+  about: string;
+}
+
+export class LanguagePack implements ILanguagePack {
+  id: string;
+  name: string;
+  isoAlpha2: string;
+  heading: string;
+  subheading: string;
+  home: string;
+  education: string;
+  experience: string;
+  skills: string;
+  about: string;
+
+  sections: Section[];
+
+  constructor(langPack: ILanguagePack) {
+    this.id = langPack.id;
+    this.name = langPack.name;
+    this.isoAlpha2 = langPack.isoAlpha2;
+    this.heading = langPack.heading;
+    this.subheading = langPack.subheading;
+    this.home = langPack.home;
+    this.education = langPack.education;
+    this.experience = langPack.experience;
+    this.skills = langPack.skills;
+    this.about = langPack.about;
+
+    this.sections = [
+      {name: this.home, id: "home-start", position: 0},
+      {name: this.education, id: "education-start", position: 1},
+      {name: this.experience, id: "experience-start", position: 2},
+      {name: this.skills, id: "skills-start", position: 3},
+      {name: this.about, id: "about-start", position: 4},
+    ];
+  }
+}
+
+export interface Section {
+  name: string;
+  id: string;
+  position: number;
 }
