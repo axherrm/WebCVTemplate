@@ -1,18 +1,14 @@
 import {
   ChangeDetectorRef,
   Component,
-  HostListener,
-  Input,
-  Output,
   QueryList,
   ViewChildren
 } from '@angular/core';
 import {NavbarDotComponent} from "../../components/navbar-dot/navbar-dot.component";
 import {NgForOf} from "@angular/common";
 import {SpeedDialModule} from "primeng/speeddial";
-import {Section} from "../../data/model";
-import {MenuItem} from "primeng/api";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {DataService} from "../../data/data.service";
 
 @Component({
   selector: 'sidebar',
@@ -27,20 +23,13 @@ import {ScrollTrigger} from "gsap/ScrollTrigger";
 })
 export class SidebarComponent {
 
-  @Input({required: true}) sections: Section[];
-  @Input({required: true}) languagesMenuItems: MenuItem[];
-
   // @Output() hovered: boolean = false;
 
   @ViewChildren("navbar_dot", {read: NavbarDotComponent}) dots: QueryList<NavbarDotComponent>;
 
   sectionActive = 0;
 
-  changeDetectorRef: ChangeDetectorRef;
-
-  constructor(changeDetectorRef: ChangeDetectorRef) {
-    this.changeDetectorRef = changeDetectorRef;
-  }
+  constructor(readonly changeDetectorRef: ChangeDetectorRef, readonly dataService: DataService) {}
 
   ngAfterViewInit(): void {
     this.addSelectedAnimation();
@@ -52,8 +41,8 @@ export class SidebarComponent {
   // }
 
   addSelectedAnimation() {
-    for (let i = 0; i < this.sections.length; i++) {
-      const section = this.sections[i];
+    for (let i = 0; i < this.dataService.languagePack.sections.length; i++) {
+      const section = this.dataService.languagePack.sections[i];
       ScrollTrigger.create({
         start: "top 50%",
         trigger: `#${section.id}`,

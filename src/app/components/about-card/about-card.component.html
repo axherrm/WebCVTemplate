@@ -18,8 +18,8 @@
 
   <div class="show-more-button" (click)="toggleExtension()">
     <div class="show-more">
-      <span *ngIf="!extended; else showLess">{{ langPack.showMore }}</span>
-      <ng-template #showLess>{{ langPack.showLess }}</ng-template>
+      <span *ngIf="!extended; else showLess">{{ dataService.languagePack.showMore }}</span>
+      <ng-template #showLess>{{ dataService.languagePack.showLess }}</ng-template>
     </div>
     <span class="icon pi pi-arrow-down" [class.extended]="extended"></span>
   </div>

@@ -1,7 +1,8 @@
 import {Component, ElementRef, HostBinding, Input, ViewChild} from '@angular/core';
 import {NgIf} from "@angular/common";
-import {AboutCard, LanguagePack} from "../../data/model";
+import {AboutCard} from "../../data/model";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
+import {DataService} from "../../data/data.service";
 
 @Component({
   selector: 'about-card',
@@ -15,13 +16,14 @@ import {ScrollTrigger} from "gsap/ScrollTrigger";
 export class AboutCardComponent {
 
   @Input({required: true}) content: AboutCard;
-  @Input({required: true}) langPack: LanguagePack;
 
   @ViewChild("text", {read: ElementRef}) textElement: ElementRef;
 
   @HostBinding("style.max-height") maxHeight: string = "22rem";
 
   extended: boolean = false;
+
+  constructor(readonly dataService: DataService) {}
 
   toggleExtension() {
     this.extended = !this.extended;

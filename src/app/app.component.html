@@ -19,7 +19,7 @@
   </div>
 
   <div class="progressbar-container"><div #progress_bar class="progressbar"></div></div>
-  <sidebar #sidebar [sections]="dataService.languagePack.sections" [languagesMenuItems]="dataService.languagesMenuItems"></sidebar>
+  <sidebar #sidebar></sidebar>
 
   <div id="home-start" style="position:relative; top: -30vh; display: table; height: 130vh; width: 100vw;">
     <div style="display: table-cell; vertical-align: middle; text-align: center;">
@@ -68,7 +68,7 @@
 
       <heading-card id="about-start" [heading]="dataService.languagePack.about" type="3" styleClass="alarm-clock-animated" style="margin-top: 5vh"></heading-card>
 
-      <about [content]="dataService.about" [langPack]="dataService.languagePack"></about>
+      <about></about>
 
       <div class="spacer" style="width: 100vw; height: 50vh"></div>
     </div>

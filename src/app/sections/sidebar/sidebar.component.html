@@ -1,14 +1,14 @@
 <div class="sidebar-container" style="height: 100vh">
   <div id="navbar">
     <!-- (hover)="hovered = true" [extended]="hovered" -->
-    <navbar-dot #navbar_dot *ngFor="let section of sections; index as i;" [section]="section" [active]="i===sectionActive">
+    <navbar-dot #navbar_dot *ngFor="let section of dataService.languagePack.sections; index as i;" [section]="section" [active]="i===sectionActive">
     </navbar-dot>
   </div>
 </div>
 
 <div class="sidebar-container">
   <div id="lang-selector">
-    <p-speedDial [model]="languagesMenuItems" direction="down" showIcon="pi pi-language" class="language-speed-dial"
+    <p-speedDial [model]="dataService.languagesMenuItems" direction="down" showIcon="pi pi-language" class="language-speed-dial"
                  buttonClassName="language-button">
     </p-speedDial>
   </div>
