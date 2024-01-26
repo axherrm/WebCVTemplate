@@ -1,0 +1,9 @@
+<div class="container">
+  <div #glow class="glow"></div>
+  <div *ngIf="iconRef" class="icon">
+    <img [src]="iconRef" alt="" height="32">
+  </div>
+  <span *ngIf="iconClass" [class]="'icon pi ' + iconClass" [style]="{'color': iconColor}"></span>
+  <span class="text"><ng-content></ng-content></span>
+  <a *ngIf="link" [href]="link" target="_blank"></a>
+</div>

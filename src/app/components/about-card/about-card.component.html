@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-content">
+    <!--TODO: cut off text properly-->
+    <div #text>
+      <span class="heading" [innerHTML]="content.heading"></span>
+      <span class="text" [innerHTML]="content.text"></span>
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>
+<div class="about-control-container">
+  <div class="title-card">
+    <div class="icon-row">
+      <div class="icon-container"><span class="pi pi-info-circle icon"></span></div>
+    </div>
+    <div class="title" [innerHTML]="content.title"></div>
+  </div>
+
+  <div class="show-more-button" (click)="toggleExtension()">
+    <div class="show-more">
+      <span *ngIf="!extended; else showLess">{{ langPack.showMore }}</span>
+      <ng-template #showLess>{{ langPack.showLess }}</ng-template>
+    </div>
+    <span class="icon pi pi-arrow-down" [class.extended]="extended"></span>
+  </div>
+</div>

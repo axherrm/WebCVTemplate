@@ -4,7 +4,6 @@
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100% !important }
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
@@ -48,7 +47,7 @@ html {
     --display-side-elements-flex: none;
   }
   @media (min-width: 1000px) {
-    --main-content-width: max(60vw, 1000px);
+    --main-content-width: max(80vw, 1000px);
     --display-side-elements: block;
     --display-side-elements-flex: flex;
   }

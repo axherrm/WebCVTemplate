@@ -1,0 +1,4 @@
+<button type="button" (click)="click.emit($event)">
+  <a *ngIf="link" [href]="link" target="_blank"></a>
+  <ng-content></ng-content>
+</button>

@@ -55,6 +55,7 @@
 }
 
 .content-container {
+  width: var(--main-content-width);
   display: flex;
   flex-direction: column;
   text-align: center;

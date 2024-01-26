@@ -46,6 +46,9 @@ export interface ILanguagePack {
   isoAlpha2: string;
   heading: string;
   subheading: string;
+  showMore: string;
+  showLess: string;
+
   home: string;
   education: string;
   experience: string;
@@ -59,6 +62,9 @@ export class LanguagePack implements ILanguagePack {
   isoAlpha2: string;
   heading: string;
   subheading: string;
+  showMore: string;
+  showLess: string;
+
   home: string;
   education: string;
   experience: string;
@@ -68,16 +74,7 @@ export class LanguagePack implements ILanguagePack {
   sections: Section[];
 
   constructor(langPack: ILanguagePack) {
-    this.id = langPack.id;
-    this.name = langPack.name;
-    this.isoAlpha2 = langPack.isoAlpha2;
-    this.heading = langPack.heading;
-    this.subheading = langPack.subheading;
-    this.home = langPack.home;
-    this.education = langPack.education;
-    this.experience = langPack.experience;
-    this.skills = langPack.skills;
-    this.about = langPack.about;
+    Object.assign(this, langPack);
 
     this.sections = [
       {name: this.home, id: "home-start", position: 0},
@@ -93,4 +90,10 @@ export interface Section {
   name: string;
   id: string;
   position: number;
+}
+
+export interface AboutCard {
+  title: string;
+  heading?: string;
+  text?: string;
 }

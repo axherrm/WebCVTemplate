@@ -28,11 +28,11 @@
     </div>
   </div>
 
-  <div id="perspective-div" style="perspective: 10000px">
+  <div id="perspective-div" style="perspective: 10000px; display: flex; flex-direction: column; align-items: center">
     <!-- [class.rotated]="sidebar.hovered" -->
     <div class="content-container">
       <heading-card #education_card id="education-start" [heading]="dataService.languagePack.education" type="light" styleClass="alarm-clock-animated"></heading-card>
-      <p-timeline id="eduction-tl" [value]="dataService.education" align="alternate" [style]="{'width': '70%', 'display': 'inline-block'}">
+      <p-timeline id="eduction-tl" [value]="dataService.education" align="alternate" [style]="{'width': '87.5%', 'display': 'inline-block'}">
         <ng-template pTemplate="marker">
           <span class="dot"></span>
         </ng-template>
@@ -47,7 +47,7 @@
       </p-timeline>
 
       <heading-card id="experience-start" [heading]="dataService.languagePack.experience" type="dark" styleClass="alarm-clock-animated"></heading-card>
-      <p-timeline id="experience-tl" [value]="dataService.experience" align="alternate" [style]="{'width': '70%', 'display': 'inline-block'}">
+      <p-timeline id="experience-tl" [value]="dataService.experience" align="alternate" [style]="{'width': '87.5%', 'display': 'inline-block'}">
         <ng-template pTemplate="marker">
           <span class="dot"></span>
         </ng-template>
@@ -62,11 +62,13 @@
       </p-timeline>
 
       <heading-card id="skills-start" [heading]="dataService.languagePack.skills" type="3" styleClass="alarm-clock-animated"></heading-card>
-      <div style="width: var(--main-content-width); margin: 0 var(--main-content-side-margin); display: flex; flex-direction: column; flex-wrap: nowrap; gap: 1rem">
+      <div style="width: 75%; display: flex; flex-direction: column; flex-wrap: nowrap; gap: 1rem">
         <skills-card class="alarm-clock-animated" *ngFor="let skillCategory of dataService.skillCategories" [category]="skillCategory"></skills-card>
       </div>
 
-      <heading-card id="about-start" [heading]="dataService.languagePack.about" type="3" styleClass="alarm-clock-animated"></heading-card>
+      <heading-card id="about-start" [heading]="dataService.languagePack.about" type="3" styleClass="alarm-clock-animated" style="margin-top: 5vh"></heading-card>
+
+      <about [content]="dataService.about" [langPack]="dataService.languagePack"></about>
 
       <div class="spacer" style="width: 100vw; height: 50vh"></div>
     </div>

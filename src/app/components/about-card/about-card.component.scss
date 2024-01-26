@@ -1,0 +1,116 @@
+:host {
+  display: flex;
+  flex-direction: var(--flex-row);
+  gap: 2rem;
+  transition: max-height 0.8s cubic-bezier(0.9, 0, 0.9, 1.0);
+}
+
+.about-container {
+  max-height: 20rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.card {
+  width: auto;
+  min-width: 40rem;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  background: #262626;
+
+  .card-content {
+    color: white;
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    text-align: justify;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    overflow: hidden
+  }
+}
+
+.about-control-container {
+  min-width: 16rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem
+}
+
+.title-card {
+  border-radius: 1.5rem;
+  padding: 2rem;
+  background: #262626;
+
+  .icon-row {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: var(--flex-row);
+    margin-bottom: 3rem;
+
+    .icon-container {
+      background: black;
+      height: 3rem;
+      width: 3rem;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .icon {
+        color: white;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .title {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    font-size: 1.9rem;
+    text-align: var(--title-align);
+  }
+}
+
+.heading {
+  font-weight: 200;
+  font-size: 2rem;
+  line-height: 2rem;
+  letter-spacing: 0.1rem;
+  background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.show-more-button {
+  border-radius: 1.5rem;
+  padding: 2rem;
+  background: #262626;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: var(--flex-row);
+  gap: .5rem;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+  .show-more {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    font-size: 1.3rem
+  }
+
+  .icon {
+    color: white;
+    font-size: 1.3rem;
+    transition: transform 1s cubic-bezier(0.6, 0, 0.6, 1.0);
+    &.extended {
+      transform: rotateX(180deg);
+    }
+  }
+}

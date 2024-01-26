@@ -3,7 +3,8 @@ import * as educationJson from '../../data/education.json';
 import * as generalJson from '../../data/general.json';
 import * as experienceJson from '../../data/experience.json';
 import * as skillsJson from '../../data/skills.json';
-import {EducationItem, ExperienceItem, LanguagePack, Skill, SkillCategory} from "./model";
+import * as aboutJson from '../../data/about.json';
+import {AboutCard, EducationItem, ExperienceItem, LanguagePack, Skill, SkillCategory} from "./model";
 import {MenuItem} from "primeng/api";
 
 @Injectable({
@@ -21,6 +22,7 @@ export class DataService {
   experience: ExperienceItem[];
   skillCategories: SkillCategory[];
   skills: Skill[];
+  about: AboutCard[];
 
   langChange: EventEmitter<void> = new EventEmitter<void>(true);
 
@@ -38,6 +40,8 @@ export class DataService {
     this.experience = experienceJson[this.lang];
     // @ts-ignore
     this.skillCategories = skillsJson[this.lang];
+    // @ts-ignore
+    this.about = aboutJson[this.lang];
     this.skills = [];
     for (let skillCategory of this.skillCategories) {
       this.skills = this.skills.concat(skillCategory.skills);

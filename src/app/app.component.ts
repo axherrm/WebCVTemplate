@@ -13,6 +13,8 @@ import {HeadingCardComponent} from "./components/heading-card/heading-card.compo
 import {SkillsCardComponent} from "./components/skills-card/skills-card.component";
 import {NavbarDotComponent} from "./components/navbar-dot/navbar-dot.component";
 import {SidebarComponent} from "./sections/sidebar/sidebar.component";
+import {AboutCardComponent} from "./components/about-card/about-card.component";
+import {AboutComponent} from "./sections/about/about.component";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -33,7 +35,9 @@ import "./js/lenis.js";
     HeadingCardComponent,
     SkillsCardComponent,
     NavbarDotComponent,
-    SidebarComponent
+    SidebarComponent,
+    AboutCardComponent,
+    AboutComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

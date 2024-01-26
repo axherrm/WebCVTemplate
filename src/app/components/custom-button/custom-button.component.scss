@@ -1,0 +1,63 @@
+:host {
+  --border-radius: 3rem;
+}
+
+a {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-radius: var(--border-radius);
+}
+
+// Inspo: btn-15 of https://codepen.io/yuhomyan/pen/OJMejWJ
+button {
+  min-width: 2.5rem;
+  height: 3.25rem;
+  line-height: 3.25rem;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  color: black;
+  border-radius: var(--border-radius);
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  align-items: center;
+
+  font-weight: 700;
+  font-size: 1.25rem;
+
+  background: white;
+  border: none;
+  z-index: 1;
+
+  // fix mask for rounded corners, see https://stackoverflow.com/a/10296258/19199839
+  -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+
+  &:before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    background: linear-gradient(to right, #a445b2, #fa4299);
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    color: #fff;
+    &:before {
+      left: 0;
+      width: 100%;
+    }
+  }
+}
+
