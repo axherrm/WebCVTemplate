@@ -1,0 +1,14 @@
+<div class="card">
+  <div class="card-content">
+    <div class="chat-rows">
+      <chat-row *ngFor="let message of dataService.contact">{{ message }}</chat-row>
+      <chat-row side="right"> Das ist eine Testmessage  </chat-row>
+    </div>
+    <form>
+      <div class="gradient-border">
+        <textarea id="chat-input" pInputTextarea [autoResize]="true"></textarea>
+      </div>
+      <div class="icon-container"><i class="pi pi-send icon"></i></div>
+    </form>
+  </div>
+</div>

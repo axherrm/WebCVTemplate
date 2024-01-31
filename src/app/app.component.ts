@@ -19,6 +19,8 @@ import {AboutComponent} from "./sections/about/about.component";
 gsap.registerPlugin(ScrollTrigger);
 
 import "./js/lenis.js";
+import {ContactComponent} from "./sections/contact/contact.component";
+import {FooterSectionComponent} from "./sections/footer-section/footer-section.component";
 
 @Component({
   selector: 'app-root',
@@ -37,7 +39,9 @@ import "./js/lenis.js";
     NavbarDotComponent,
     SidebarComponent,
     AboutCardComponent,
-    AboutComponent
+    AboutComponent,
+    ContactComponent,
+    FooterSectionComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

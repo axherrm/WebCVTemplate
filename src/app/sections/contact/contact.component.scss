@@ -1,0 +1,109 @@
+:host {
+  position: relative;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  border-radius: 1.5rem;
+  padding: 3rem;
+  background: #262626;
+
+  .card-content {
+    color: white;
+    height: 100%;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+}
+
+.chat-rows {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.4rem;
+
+  .gradient-border {
+    $border-radius: 2.5rem;
+    $border: 3px;
+    position: relative;
+    width: 80%;
+    //height: 48px;
+    background: white;
+    border-radius: $border-radius;
+    margin: 1px;
+    padding: $border calc($border-radius / 2);
+
+    &::before {
+      // code from: https://dev.to/afif/border-with-gradient-and-radius-387f
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: $border;
+      margin: -1px;
+      background: linear-gradient(to right, #a445b2, #fa4299);
+      -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+  }
+
+  .icon-container {
+    background: linear-gradient(to right, #a445b2, #fa4299);
+    height: 3rem;
+    width: 3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .icon {
+      color: white;
+      font-size: 1.5rem;
+      margin-left: -0.15rem;
+    }
+  }
+}
+
+:host ::ng-deep {
+
+  .p-inputtext#chat-input {
+    position: relative;
+    resize: none;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    padding-left: 0;
+    padding-right: 0;
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+      //box-shadow: 1px 1px 5px rgba(1, 1, 0, .7);
+    }
+  }
+
+}

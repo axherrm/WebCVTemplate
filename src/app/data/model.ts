@@ -70,6 +70,7 @@ export class LanguagePack implements ILanguagePack {
   experience: string;
   skills: string;
   about: string;
+  contact: string;
 
   sections: Section[];
 
@@ -82,6 +83,7 @@ export class LanguagePack implements ILanguagePack {
       {name: this.experience, id: "experience-start", position: 2},
       {name: this.skills, id: "skills-start", position: 3},
       {name: this.about, id: "about-start", position: 4},
+      {name: this.contact, id: "contact-start", position: 5},
     ];
   }
 }

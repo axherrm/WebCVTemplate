@@ -63,7 +63,7 @@
 
   // for rotation
   position: relative;
-  transform-style: preserve-3d;
+  //transform-style: preserve-3d; // breaks background-attachment: fixed see https://bugzilla.mozilla.org/show_bug.cgi?id=1352915
   transform-origin: left;
   transition: all .6s ease-in-out;
   &.rotated {

@@ -1,0 +1,12 @@
+<div class="img-container">
+  <img *ngIf="isLeft()" src="../../../assets/chat-avatar/avatar.png" height="210" width="210" alt="">
+  <img *ngIf="!isLeft()" src="../../../assets/chat-avatar/anonymous.svg" alt="">
+</div>
+<!--<div class="triangle background-gradient"></div>-->
+<div class="fake-triangle"></div>
+<div class="message-box">
+  <ng-content></ng-content>
+</div>
+
+
+

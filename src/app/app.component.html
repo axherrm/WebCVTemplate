@@ -28,7 +28,7 @@
     </div>
   </div>
 
-  <div id="perspective-div" style="perspective: 10000px; display: flex; flex-direction: column; align-items: center">
+  <div id="perspective-div" style="display: flex; flex-direction: column; align-items: center">
     <!-- [class.rotated]="sidebar.hovered" -->
     <div class="content-container">
       <heading-card #education_card id="education-start" [heading]="dataService.languagePack.education" type="light" styleClass="alarm-clock-animated"></heading-card>
@@ -70,7 +70,11 @@
 
       <about></about>
 
+      <heading-card id="contact-start" [heading]="dataService.languagePack.contact" type="3" styleClass="alarm-clock-animated" style="margin-top: 5vh"></heading-card>
+      <contact></contact>
+
       <div class="spacer" style="width: 100vw; height: 50vh"></div>
     </div>
   </div>
+  <footer-section></footer-section>
 </main>
