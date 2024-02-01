@@ -14,7 +14,8 @@
     "education": "Bildungsweg",
     "experience": "Erfahrung",
     "skills": "Kenntnisse",
-    "about": "Über"
+    "about": "Über",
+    "contact": "Kontakt"
   },
   "en": {
     "id": "en",
@@ -29,6 +30,7 @@
     "education": "Education",
     "experience": "Experience",
     "skills": "Skills",
-    "about": "About"
+    "about": "About",
+    "contact": "Contact"
   }
 }

@@ -1,12 +1,26 @@
 import {EventEmitter, Injectable} from '@angular/core';
+import {
+  AboutCard,
+  ContactMessages,
+  EducationItem,
+  ExperienceItem,
+  LanguagePack,
+  MailSettings,
+  Skill,
+  SkillCategory, SocialMediaItem
+} from "./model";
+import {MenuItem} from "primeng/api";
 import * as educationJson from '../../data/education.json';
 import * as generalJson from '../../data/general.json';
 import * as experienceJson from '../../data/experience.json';
 import * as skillsJson from '../../data/skills.json';
 import * as aboutJson from '../../data/about.json';
-import {AboutCard, EducationItem, ExperienceItem, LanguagePack, Skill, SkillCategory} from "./model";
-import {MenuItem} from "primeng/api";
+import * as contactJson from '../../data/contact.json';
 
+/**
+ * Service that imports all the customizable JSON data and stores them.
+ * Access user data through this service.
+ */
 @Injectable({
   providedIn: 'root'
 })
@@ -15,7 +29,12 @@ export class DataService {
   defaultLang: string = generalJson.defaultLanguage;
   loadedLanguages: string[] = generalJson.languages;
   languagesMenuItems: MenuItem[] = [];
+  mailSettings: MailSettings = contactJson["mail-settings"];
+  socialMedia: SocialMediaItem[] = contactJson["social-media"];
 
+  /**
+   * Language specific data
+   */
   lang: string;
   languagePack: LanguagePack;
   education: EducationItem[];
@@ -23,7 +42,11 @@ export class DataService {
   skillCategories: SkillCategory[];
   skills: Skill[];
   about: AboutCard[];
+  contact: ContactMessages;
 
+  /**
+   * Emitted when the user switches language
+   */
   langChange: EventEmitter<void> = new EventEmitter<void>(true);
 
   constructor() {
@@ -33,19 +56,21 @@ export class DataService {
   loadData(): void {
     console.log("Loading data for lang", this.lang);
     // @ts-ignore
-    this.education = educationJson[this.lang];
-    // @ts-ignore
     this.languagePack = new LanguagePack(generalJson[this.lang]);
+    // @ts-ignore
+    this.education = educationJson[this.lang];
     // @ts-ignore
     this.experience = experienceJson[this.lang];
     // @ts-ignore
     this.skillCategories = skillsJson[this.lang];
-    // @ts-ignore
-    this.about = aboutJson[this.lang];
     this.skills = [];
     for (let skillCategory of this.skillCategories) {
       this.skills = this.skills.concat(skillCategory.skills);
     }
+    // @ts-ignore
+    this.about = aboutJson[this.lang];
+    // @ts-ignore
+    this.contact = contactJson[this.lang];
     this.fillLanguageButton();
   }
 

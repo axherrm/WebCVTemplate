@@ -1,0 +1,11 @@
+<a [href]="input.link" target="_blank" class="container">
+  <div class="icon-container">
+    <span *ngIf="input.primeIcon" [class]="'pi icon ' + input.primeIcon"></span>
+    <div *ngIf="input.iconRef" class="icon">
+      <img [src]="input.iconRef" alt="" height="32">
+    </div>
+  </div>
+
+  <div class="username" [innerHTML]="input.username"></div>
+  <div class="category">{{ input.category }}</div>
+</a>

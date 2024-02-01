@@ -70,6 +70,7 @@ export class LanguagePack implements ILanguagePack {
   experience: string;
   skills: string;
   about: string;
+  contact: string;
 
   sections: Section[];
 
@@ -82,6 +83,7 @@ export class LanguagePack implements ILanguagePack {
       {name: this.experience, id: "experience-start", position: 2},
       {name: this.skills, id: "skills-start", position: 3},
       {name: this.about, id: "about-start", position: 4},
+      {name: this.contact, id: "contact-start", position: 5},
     ];
   }
 }
@@ -96,4 +98,27 @@ export interface AboutCard {
   title: string;
   heading?: string;
   text?: string;
+}
+
+export interface MailSettings {
+  enabled: boolean;
+  publicKey: string;
+  serviceId: string;
+  templateId: string;
+  ownMessageDelay: number;
+}
+
+export interface ContactMessages {
+  conversationStart: string[];
+  successMessages: string[];
+  failedMessages: string[];
+  tooManyMessages: string[];
+}
+
+export interface SocialMediaItem {
+  category: string;
+  username: string;
+  primeIcon?: string;
+  iconRef?: string;
+  link: string;
 }

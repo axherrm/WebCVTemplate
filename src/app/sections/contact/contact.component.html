@@ -1,0 +1,21 @@
+<div class="card alarm-clock-animated">
+  <div class="card-content">
+    <div class="chat-rows">
+      <chat-row *ngFor="let message of messages; index as i; first as isFirst" [text]="message.text" [side]="message.side"
+                [followingMessage]="!isFirst && messages[i-1].side === message.side" [sent]="message.sent">
+      </chat-row>
+    </div>
+    <form (submit)="sendMessage()" (keydown.enter)="$event.preventDefault(); sendMessage()" (keydown.shift.enter)="noop.prototype(); // noop">
+      <div class="icon-container invisible"></div>
+      <div class="gradient-border">
+        <textarea #chat_input rows="1" id="chat-input"  [formControl]="text"></textarea>
+      </div>
+      <button type="submit" class="icon-container invisible" [class.invisible]="text.hasError('required')"><i class="pi pi-send icon"></i></button>
+    </form>
+  </div>
+</div>
+
+<div #social_media_container class="social-media-container alarm-clock-animated">
+  <social-media-card *ngFor="let item of dataService.socialMedia" [input]="item"></social-media-card>
+</div>
+<div #spacer></div>

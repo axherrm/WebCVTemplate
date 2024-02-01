@@ -1,0 +1,65 @@
+{
+  "mail-settings": {
+    "enabled": true,
+    "publicKey": "0_0q3lt_klW_BfqYj",
+    "serviceId": "CV",
+    "templateId": "CV-template",
+    "ownMessageDelay": 1500
+  },
+  "social-media": [
+    {
+      "category": "E-Mail",
+      "username": "axherrm.business@gmail.com",
+      "primeIcon": "pi-envelope",
+      "link": "mailto:axherrm.business@gmail.com"
+    },
+    {
+      "category": "LinkedIn",
+      "username": "@axherrm",
+      "primeIcon": "pi-linkedin",
+      "link": "https://www.linkedin.com/in/axherrm/"
+    },
+    {
+      "category": "GitHub",
+      "username": "@axherrm",
+      "primeIcon": "pi-github",
+      "link": "https://github.com/axherrm"
+    }
+  ],
+  "de": {
+    "conversationStart": [
+      "Ich hoffe, diese Webseite gefällt Ihnen!",
+      "Ich freue mich über jegliche Rückmeldungen und Business Anfragen."
+    ],
+    "successMessages": [
+      "Vielen Dank für Ihre Nachricht.",
+      "Falls Sie noch etwas hinzufügen möchten oder Sie vergessen haben anzugeben, wie ich Sie erreichen kann, schreiben Sie einfach eine weitere Nachricht."
+    ],
+    "failedMessages": [
+      "Ihre Nachricht konnte leider aufgrund von technischen Problemen nicht zugestellt werden.",
+      "Bitte verwenden sie eine andere Kontaktmöglichkeit stattdessen."
+    ],
+    "tooManyMessages": [
+      "Zum Schutz vor Spam können maximal fünf Nachrichten versendet werden.",
+      "Falls es sich nicht um Spam handelt, benutzen Sie bitte eine andere Kontaktmöglichkeit."
+    ]
+  },
+  "en": {
+    "conversationStart": [
+      "I hope you like this website!",
+      "I look forward to any feedback and business inquiries."
+    ],
+    "successMessages": [
+      "Thank you for your message.",
+      "In case there is anything else you would like to add or if you have forgotten to specify how I can reach you, simply write another message."
+    ],
+    "failedMessages": [
+      "Unfortunately, your message could not be delivered due to technical problems.",
+      "Please use another contact option instead."
+    ],
+    "tooManyMessages": [
+      "To protect against spam, a maximum of five messages may be sent.",
+      "If it is not spam, simply use another contact option."
+    ]
+  }
+}

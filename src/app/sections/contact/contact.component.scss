@@ -1,0 +1,121 @@
+//$font-family: 'Inter', sans-serif;
+//$font-weight: 200;
+$font-size: 1.6rem;
+$line-height: $font-size;
+
+:host {
+  position: relative;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card {
+  border-radius: 1.5rem;
+  padding: 3rem;
+  background: #262626;
+
+  .card-content {
+    color: white;
+    height: 100%;
+    width: 100%;
+
+    font-family: 'Inter', sans-serif;
+    font-size: $font-size;
+    line-height: $line-height;
+    font-weight: 200;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+}
+
+.chat-rows {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+  gap: 0.4rem;
+
+  $textarea-padding: 0.75rem;
+  $chat-border: 3px;
+
+  .gradient-border {
+    position: relative;
+    z-index: 2;
+    width: 80%;
+    background: linear-gradient(to right, #a445b2, #fa4299);
+    border-radius: 2.5rem;
+    line-height: 0; // Safari & Chrome need this
+    padding: $chat-border;
+
+    textarea#chat-input {
+      box-sizing: border-box;
+      width: 100%;
+      min-height: calc($line-height + $textarea-padding * 2);
+      border: 0;
+      margin: 0;
+
+      resize: none;
+      overflow: hidden;
+
+      font-family: inherit;
+      font-weight: inherit;
+      font-size: inherit;
+      line-height: $line-height;
+
+      border-radius: inherit;
+      padding: $textarea-padding 1.25rem;
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .icon-container {
+    z-index: 1;
+    background: linear-gradient(to right, #a445b2, #fa4299);
+    height: calc($line-height + $textarea-padding * 2 + $chat-border * 2);
+    width: auto;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+
+    transition: all .1s linear;
+    &.invisible {
+      transform: translateX(-150%);
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .icon {
+      color: white;
+      font-size: 1.5rem;
+      margin-left: -0.15rem;
+    }
+  }
+}
+
+.social-media-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+}

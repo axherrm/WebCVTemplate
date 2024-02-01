@@ -1,0 +1,39 @@
+.container {
+  border-radius: 1.5rem;
+  padding: 3rem;
+  background: #262626;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  color: white;
+  //max-width: 20vw;
+}
+
+.icon-container {
+  background: black;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .icon {
+    aspect-ratio: 1;
+    color: white;
+    font-size: 1.7rem;
+    //display: flex;
+    //align-items: center;
+  }
+  margin-bottom: 3rem;
+}
+
+.username {
+  font-size: 1.6rem;
+  text-align: right;
+}
+
+.category {
+  margin-top: 1rem;
+}

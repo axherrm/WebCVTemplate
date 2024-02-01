@@ -22,6 +22,12 @@ html {
 
 // TODO remove once style theme is properly done: Anleitung dafür: https://angularindepth.com/posts/1320/custom-theme-for-angular-material-components-series-part-1-create-a-theme
 :root {
+  // deactivate link style
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
   --color-grey-dark-1: #363C43;
   --color-grey-dark-2: #747474;
   --color-grey-medium-1: #CACACA;
