@@ -99,3 +99,26 @@ export interface AboutCard {
   heading?: string;
   text?: string;
 }
+
+export interface MailSettings {
+  enabled: boolean;
+  publicKey: string;
+  serviceId: string;
+  templateId: string;
+  ownMessageDelay: number;
+}
+
+export interface ContactMessages {
+  conversationStart: string[];
+  successMessages: string[];
+  failedMessages: string[];
+  tooManyMessages: string[];
+}
+
+export interface SocialMediaItem {
+  category: string;
+  username: string;
+  primeIcon?: string;
+  iconRef?: string;
+  link: string;
+}

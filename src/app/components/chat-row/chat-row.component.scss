@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   width: 70%;
+  margin-top: 1.2rem;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: flex-start;
@@ -49,6 +50,10 @@
       transform: translateX(-1.4rem) rotateZ(-45deg);
     }
   }
+
+  &.following-message {
+    margin-top: 0.3rem;
+  }
 }
 
 .img-container {
@@ -70,15 +75,15 @@
   background: linear-gradient(90deg, #a445b2, #fa4299);
   border-radius: 1rem;
   padding: 1.5rem;
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 1.7rem;
-  line-height: 1.7rem;
   text-align: left;
+
+  &.not-received {
+    filter: brightness(0.5);
+  }
 }
 
 .triangle {
   margin-top: calc((var(--1-row-height) - var(--triangle-height))  / 2);
-  //margin-top: -0.5rem;
   width: 0;
   height: 0;
 }
@@ -91,6 +96,14 @@
   flex-shrink: 0;
   background: #a445b2;
   border-radius: 0.4rem;
+
+  &.not-received {
+    filter: brightness(0.5);
+  }
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 // for real gradient on multiple elements, see: https://codepen.io/axherrm/pen/YzgYEeL

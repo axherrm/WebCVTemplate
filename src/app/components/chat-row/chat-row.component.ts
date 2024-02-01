@@ -12,7 +12,16 @@ import {NgIf} from "@angular/common";
 })
 export class ChatRowComponent {
 
+  @Input() text: string;
   @Input() side: "left" | "right" = "left";
+  /**
+   * Whether a message is not the first message on the same side of the chat.
+   */
+  @Input() @HostBinding("class.following-message") followingMessage: boolean = false;
+  /**
+   * Whether the message is sent successfully. Not sent message are styled differently.
+   */
+  @Input() sent: boolean = true;
 
   // @HostBinding("style.flex-direction") flexDirection: string = "row";
   @HostBinding("class.left") get left() { return this.isLeft() }

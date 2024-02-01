@@ -1,3 +1,8 @@
+//$font-family: 'Inter', sans-serif;
+//$font-weight: 200;
+$font-size: 1.6rem;
+$line-height: $font-size;
+
 :host {
   position: relative;
   width: 80%;
@@ -15,10 +20,12 @@
     color: white;
     height: 100%;
     width: 100%;
+
     font-family: 'Inter', sans-serif;
+    font-size: $font-size;
+    line-height: $line-height;
     font-weight: 200;
-    font-size: 1.4rem;
-    line-height: 1.8rem;
+
     overflow: hidden;
 
     display: flex;
@@ -39,46 +46,64 @@ form {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   flex-wrap: nowrap;
   gap: 0.4rem;
 
-  .gradient-border {
-    $border-radius: 2.5rem;
-    $border: 3px;
-    position: relative;
-    width: 80%;
-    //height: 48px;
-    background: white;
-    border-radius: $border-radius;
-    margin: 1px;
-    padding: $border calc($border-radius / 2);
+  $textarea-padding: 0.75rem;
+  $chat-border: 3px;
 
-    &::before {
-      // code from: https://dev.to/afif/border-with-gradient-and-radius-387f
-      content: "";
-      position: absolute;
-      inset: 0;
+  .gradient-border {
+    position: relative;
+    z-index: 2;
+    width: 80%;
+    background: linear-gradient(to right, #a445b2, #fa4299);
+    border-radius: 2.5rem;
+    line-height: 0; // Safari & Chrome need this
+    padding: $chat-border;
+
+    textarea#chat-input {
+      box-sizing: border-box;
+      width: 100%;
+      min-height: calc($line-height + $textarea-padding * 2);
+      border: 0;
+      margin: 0;
+
+      resize: none;
+      overflow: hidden;
+
+      font-family: inherit;
+      font-weight: inherit;
+      font-size: inherit;
+      line-height: $line-height;
+
       border-radius: inherit;
-      padding: $border;
-      margin: -1px;
-      background: linear-gradient(to right, #a445b2, #fa4299);
-      -webkit-mask:
-        linear-gradient(#fff 0 0) content-box,
-        linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor;
-      mask-composite: exclude;
+      padding: $textarea-padding 1.25rem;
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
     }
   }
 
   .icon-container {
+    z-index: 1;
     background: linear-gradient(to right, #a445b2, #fa4299);
-    height: 3rem;
-    width: 3rem;
+    height: calc($line-height + $textarea-padding * 2 + $chat-border * 2);
+    width: auto;
+    aspect-ratio: 1;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 0;
+
+    transition: all .1s linear;
+    &.invisible {
+      transform: translateX(-150%);
+      opacity: 0;
+      visibility: hidden;
+    }
 
     .icon {
       color: white;
@@ -88,22 +113,9 @@ form {
   }
 }
 
-:host ::ng-deep {
-
-  .p-inputtext#chat-input {
-    position: relative;
-    resize: none;
-    width: 100%;
-    height: 100%;
-    border: 0;
-    padding-left: 0;
-    padding-right: 0;
-
-    &:focus {
-      outline: none;
-      box-shadow: none;
-      //box-shadow: 1px 1px 5px rgba(1, 1, 0, .7);
-    }
-  }
-
+.social-media-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  gap: 2rem;
 }
