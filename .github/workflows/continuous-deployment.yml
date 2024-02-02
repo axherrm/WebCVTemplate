@@ -25,6 +25,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v3
+        with:
+          submodules: 'true'
       - uses: actions/setup-node@v4
         with:
           # Version Spec of the version to use in SemVer notation.
@@ -33,6 +35,7 @@ jobs:
           node-version: 20
       - name: Build
         run: |
+          cd core
           npm install
           npm run build
       - name: Setup Pages
@@ -40,7 +43,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: ./dist/cv/browser/
+          path: ./core/dist/cv/browser/
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2

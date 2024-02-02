@@ -1,9 +1,0 @@
-version: V2
-
-services:
-  app:
-    image: cv
-    build: ./
-    ports:
-      - "8080:80"
-

@@ -1,9 +1,0 @@
-<div [class]="cardStyleClass">
-  <h3 class="heading" [innerHTML]="heading"></h3>
-  <h4 class="subheading" [innerHTML]="subheading"></h4>
-  <div class="content" [innerHTML]="content"></div>
-  <div class="bullet-point-container" *ngIf="bulletPoints">
-    <p-badge *ngFor="let bulletPoint of bulletPoints" [value]="bulletPoint"
-             [style]="{'margin': '0 0.3vh', 'background': 'rgba(75,85,93,0.7)'}"></p-badge>
-  </div>
-</div>
