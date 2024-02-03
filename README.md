@@ -1,38 +1,92 @@
-# CV - Axel Herrmann
+[//]: # (Design from: https://github.com/Louis3797/awesome-readme-template)
+<div align="center">
+  <!-- <img src="assets/logo.png" alt="logo" width="200" height="auto" /> -->
+  <h1>WebCVTemplate</h1>
 
-This is the development project for the Curriculum Vitae of Axel Herrmann.  
-See the newest deployed version at https://axherrm.github.io/CV/
+  <p>
+    A simple template for your own self-hosted CV! See <a href="https://axherrm.github.io/CV/" target="_blank">demo</a>
+  </p>
 
-## How to fill the template
+  <!-- Badges -->
+  <p>
+    <a href="https://github.com/axherrm/WebCVTemplate/graphs/contributors">
+      <img src="https://img.shields.io/github/contributors/axherrm/WebCVTemplate" alt="contributors" />
+    </a>
+    <a href="">
+      <img src="https://img.shields.io/github/last-commit/axherrm/WebCVTemplate" alt="last update" />
+    </a>
+    <a href="https://github.com/axherrm/WebCVTemplate/network/members">
+      <img src="https://img.shields.io/github/forks/axherrm/WebCVTemplate" alt="forks" />
+    </a>
+    <a href="https://github.com/axherrm/WebCVTemplate/stargazers">
+      <img src="https://img.shields.io/github/stars/axherrm/WebCVTemplate" alt="stars" />
+    </a>
+    <a href="https://github.com/axherrm/WebCVTemplate/issues/">
+      <img src="https://img.shields.io/github/issues/axherrm/WebCVTemplate" alt="open issues" />
+    </a>
+    <a href="https://github.com/axherrm/WebCVTemplate/blob/master/LICENSE">
+      <img src="https://img.shields.io/github/license/axherrm/WebCVTemplate.svg" alt="license" />
+    </a>
+  </p>
 
-All data displayed on the CV is stored in [src/data].  
+  <p>
+    This website was designed as a template with the aim of enabling anyone to create their own website quickly and easily. 
+    Anyone should be able to create a modern CV website within a few minutes. 
+    The code is open source, and I am very happy about further use or contributions! 
+    Due to the early planning of this in the design, no code needs to be adapted to use the template. 
+    Therefore, not much programming experience is necessary; all data for the website is easily configurable in JSON files. 
+    In the future, a simple web tool is planned with which the template can be filled out to make the process even easier. 
+    After customizing the template with your own data, it can be easily published via GitHub Pages. 
+    The description for all these steps is given below.
+  </p>
+  <a href="https://axherrm.github.io/CV/" target="_blank">
+    <img src="docs/demo.gif" alt="this slowpoke moves" />
+  </a>
+</div>
+
+## 1. How to use the template
+
+Using this template consists of 4 easy steps:
+
+ 1. Click `Use this template` in the top right corner of this page and create your own CV repository
+ 2. Clone your repo: `git clone git@github.com:username/project.git --recurse-submodules` (note that fetching the submodule is necessary for the project to work locally)
+ 3. Execute setup script to make your website ready for filling in you information: `sh setup.sh`
+    - This should move a few files and add a GitHub workflow to deploy your project. 
+      The changes are automatically committed and a first deployment should be created.
+ 4. Fill the template with your own information
+
+### 1.1 Fill the template
+
+All data displayed on the CV is stored in `input/data`  
 Use the following steps to insert your own data:
-> ### 1. [general.json]
-> 
-> This file contains a definition of the languages that can be used in the CV as well as a definition of section headings etc. for each language.
-> If all languages you want to use are defined you only need to adjust the languages array.
-> 
-> | Field                 | Description                                                                                 |
-> |-----------------------|---------------------------------------------------------------------------------------------|
-> | `languages`           | Array of IDs of all available languages                                                     |
-> | `defaultLanguage`     | ID of language that should be used when no locale could be determined                       |
-> | `${IDs of languages}` | Each of the above listed languages needs a `LanguagePack` object like defined in [model.ts] |
-> 
-> ### 2. Other JSON files
-> 
-> The other JSON in [src/data] contain the user specific data.
-> All languages that are configured in the previous step in [languages.json] need an entry in each of these files.
-> For the definition of the obejcts to define refer to [model.ts].
-> 
 
-## Development server
+#### `general.json`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This file contains a definition of the languages that can be used in the CV as well as a definition of section headings etc. for each language.
+If all languages you want to use are defined you only need to adjust the languages array.
 
-## Build
+| Field                 | Description                                                                                 |
+|-----------------------|---------------------------------------------------------------------------------------------|
+| `languages`           | Array of IDs of all available languages                                                     |
+| `defaultLanguage`     | ID of language that should be used when no locale could be determined                       |
+| `${IDs of languages}` | Each of the above listed languages needs a `LanguagePack` object like defined in [model.ts] |
+ 
+#### Other JSON files
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The other JSON in `input/data/` contain the user specific data.
+All languages that are configured in the previous step in `general.json` need an entry in each of these files.
+For the definition of the objects to define refer to [model.ts].
+ 
 
-[src/data]: src/data
-[general.json]: src/data/general.json
-[model.ts]: src/app/data/model.ts
+## 2. Start server in development
+
+```shell
+cd core
+npm install
+npm start         # dev server at `http://localhost:4200/` with hot reload
+npm run build     # builds application to core/dist/
+```
+
+
+
+[model.ts]: core/src/app/data/model.ts
