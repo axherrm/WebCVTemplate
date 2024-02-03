@@ -83,10 +83,17 @@ For the definition of the objects to define refer to [model.ts].
 ```shell
 cd core
 npm install
-npm start         # dev server at `http://localhost:4200/` with hot reload
+npm start         # dev server at http://localhost:4200/ with hot reload
 npm run build     # builds application to core/dist/
 ```
 
+## 3. Project Structure
 
+In order to separate template logic from code this project was divided into 2 parts:
+ - This repository: documentation for using the template, scripts for the template, documentation of the whole project
+ - [core]: code base the whole project
 
+This separation enables users to more easily update the code after applying the template because using a template repository creates an entire separate Git history.
+
+[core]: https://github.com/axherrm/WebCVTemplate-core
 [model.ts]: core/src/app/data/model.ts
