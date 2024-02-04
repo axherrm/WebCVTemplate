@@ -95,5 +95,10 @@ In order to separate template logic from code this project was divided into 2 pa
 
 This separation enables users to more easily update the code after applying the template because using a template repository creates an entire separate Git history.
 
+To update the core, use:
+```shell
+git submodule update
+```
+
 [core]: https://github.com/axherrm/WebCVTemplate-core
 [model.ts]: core/src/app/data/model.ts
