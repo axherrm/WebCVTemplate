@@ -4,7 +4,7 @@
   <h1>WebCVTemplate</h1>
 
   <p>
-    A simple template for your own self-hosted CV! See <a href="https://axherrm.github.io/CV/" target="_blank">demo</a>
+    Easy to use Open-Source Template for your own self-hosted CV website! See <a href="https://axherrm.github.io/CV/" target="_blank">demo</a>
   </p>
 
   <!-- Badges -->
