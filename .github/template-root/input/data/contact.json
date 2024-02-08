@@ -28,8 +28,8 @@
   ],
   "de": {
     "conversationStart": [
-      "Ich hoffe, diese Webseite gefällt Ihnen!",
-      "Ich freue mich über jegliche Rückmeldungen und Business Anfragen."
+      "Wie gefällt Ihnen diese Webseite?",
+      "Ich freue mich über jegliches Feedback und Business Anfragen."
     ],
     "successMessages": [
       "Vielen Dank für Ihre Nachricht.",
@@ -42,11 +42,12 @@
     "tooManyMessages": [
       "Zum Schutz vor Spam können maximal fünf Nachrichten versendet werden.",
       "Falls es sich nicht um Spam handelt, benutzen Sie bitte eine andere Kontaktmöglichkeit."
-    ]
+    ],
+    "placeholder": "Schreiben Sie mir ..."
   },
   "en": {
     "conversationStart": [
-      "I hope you like this website!",
+      "How did you like my website?",
       "I look forward to any feedback and business inquiries."
     ],
     "successMessages": [
@@ -60,6 +61,7 @@
     "tooManyMessages": [
       "To protect against spam, a maximum of five messages may be sent.",
       "If it is not spam, simply use another contact option."
-    ]
+    ],
+    "placeholder": "Write me ..."
   }
 }
