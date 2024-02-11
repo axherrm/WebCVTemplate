@@ -1,6 +1,7 @@
 {
   "languages": ["de", "en"],
   "defaultLanguage": "en",
+  "showAboutWebsite": true,
   "de": {
     "id": "de",
     "name": "Deutsch",
