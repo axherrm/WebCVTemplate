@@ -38,6 +38,7 @@ jobs:
           cd core
           npm install
           npm run build
+          cp dist/cv/browser/index.html dist/cv/browser/404.html
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact

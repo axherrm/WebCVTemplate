@@ -1,0 +1,321 @@
+{
+  "de": [
+    {
+      "id": "languages",
+      "name": "Sprachen",
+      "description": "In diesem Kapitel können Sie beliebig Kategorien wie Sprache, Backend, Frontend, etc. erstellen. Dazu können sie dann ihre Skills mit Beschreibung und in Prozentbewertung hinzufügen.",
+      "icon": "pi-language",
+      "skills": [
+        {
+          "id": "german",
+          "name": "Deutsch",
+          "rating": 100,
+          "text": "Deutsch ist eine tolle Sprache."
+        },
+        {
+          "id": "english",
+          "name": "Englisch",
+          "rating": 80,
+          "text": "Englisch ist eine tolle Sprache."
+        },
+        {
+          "id": "latin",
+          "name": "Latein",
+          "rating": 50,
+          "text": "Latein ist eine tolle (Sprache)."
+        }
+      ]
+    },
+    {
+      "id": "backend",
+      "name": "Backend",
+      "description": "Hier kann eine kleine Beschreibung der Kategorie hinzugefügt werden oder auch wie erfahren man in dieser Kategorie ist.",
+      "icon": "pi-server",
+      "skills": [
+        {
+          "id": "java",
+          "name": "Java",
+          "rating": 80,
+          "text": "Hier kann eine Beschreibung zum jeweiligen Skill hinzugefügt werden. Welche Erfahrungen habe ich verbunden mit diesem Skill gesammelt? Wie würde ich meinen Wissensstand bewerten?",
+          "subSkills": ["SpringBoot", "Apache Camel", "Maven", "Gradle"]
+        },
+        {
+          "id": "python",
+          "name": "Python",
+          "rating": 60,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+          "subSkills": ["Flask, Jinja"]
+        },
+        {
+          "id": "c++",
+          "name": "C++",
+          "rating": 40,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        },
+        {
+          "id": "ruby",
+          "name": "Ruby",
+          "rating": 60,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        }
+      ]
+    },
+    {
+      "id": "frontend",
+      "name": "Frontend",
+      "description": "Entwicklung von Web- und Mobilanwendungen",
+      "icon": "pi-mobile",
+      "skills": [
+        {
+          "id": "html-css",
+          "name": "HTML & CSS",
+          "rating": 80,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        },
+        {
+          "id": "js",
+          "name": "JavaScript",
+          "rating": 80,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        },
+        {
+          "id": "ts",
+          "name": "TypeScript",
+          "rating": 60,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        },
+        {
+          "id": "vue",
+          "name": "Vue.js",
+          "rating": 60,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        },
+        {
+          "id": "angular",
+          "name": "Angular",
+          "rating": 60,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        },
+        {
+          "id": "primeng",
+          "name": "PrimeNG",
+          "rating": 60,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        }
+      ]
+    },
+    {
+      "id": "methods",
+      "name": "Methoden",
+      "description": "Skills, die zur Softwareentwicklung gehören, aber nicht direkt zu Programmierung",
+      "icon": "pi-compass",
+      "skills": [
+        {
+          "id": "scrum",
+          "name": "Scrum",
+          "rating": 70,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        },
+        {
+          "id": "git",
+          "name": "Git",
+          "rating": 80,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        },
+        {
+          "id": "jira",
+          "name": "Jira",
+          "rating": 70,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        }
+      ]
+    },
+    {
+      "id": "os",
+      "name": "Betriebssysteme",
+      "description": "Die Verwendung des Betriebssystems ist ein essenzieller Teil bei der Softwareentwicklung und auch bei OS-nahen Technologien wie Shell-Scripts und Docker",
+      "icon": "pi-desktop",
+      "skills": [
+        {
+          "id": "mac",
+          "name": "MacOS",
+          "rating": 70,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        },
+        {
+          "id": "linux",
+          "name": "Linux",
+          "rating": 60,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        },
+        {
+          "id": "windows",
+          "name": "Windows",
+          "rating": 50,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        }
+      ]
+    }
+  ],
+  "en": [
+    {
+      "id": "languages",
+      "name": "Languages",
+      "description": "In this section, you can create categories such as language, backend, frontend, etc. as you wish. You can then add your skills with a description and percentage rating.",
+      "icon": "pi-language",
+      "skills": [
+        {
+          "id": "german",
+          "name": "German",
+          "rating": 100,
+          "text": "German is a cool language."
+        },
+        {
+          "id": "english",
+          "name": "English",
+          "rating": 84,
+          "text": "English is a cool language."
+        },
+        {
+          "id": "latin",
+          "name": "Latin",
+          "rating": 50,
+          "text": "Latin is a cool (language)."
+        }
+      ]
+    },
+    {
+      "id": "backend",
+      "name": "Backend",
+      "description": "Here you can add a short description of the category or how experienced you are in this category.",
+      "icon": "pi-server",
+      "skills": [
+        {
+          "id": "java",
+          "name": "Java",
+          "rating": 80,
+          "text": "A description of the respective skill can be added here. What experience have I gained in connection with this skill? How would I rate my level of knowledge?",
+          "subSkills": ["SpringBoot", "Apache Camel", "Maven", "Gradle"]
+        },
+        {
+          "id": "python",
+          "name": "Python",
+          "rating": 60,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+          "subSkills": ["Flask, Jinja"]
+        },
+        {
+          "id": "c++",
+          "name": "C++",
+          "rating": 40,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        },
+        {
+          "id": "ruby",
+          "name": "Ruby",
+          "rating": 60,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        }
+      ]
+    },
+    {
+      "id": "frontend",
+      "name": "Frontend",
+      "description": "Development of web and mobile applications",
+      "icon": "pi-mobile",
+      "skills": [
+        {
+          "id": "html-css",
+          "name": "HTML & CSS",
+          "rating": 80,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        },
+        {
+          "id": "js",
+          "name": "JavaScript",
+          "rating": 80,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        },
+        {
+          "id": "ts",
+          "name": "TypeScript",
+          "rating": 60,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        },
+        {
+          "id": "vue",
+          "name": "Vue.js",
+          "rating": 60,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        },
+        {
+          "id": "angular",
+          "name": "Angular",
+          "rating": 60,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        },
+        {
+          "id": "primeng",
+          "name": "PrimeNG",
+          "rating": 60,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        }
+      ]
+    },
+    {
+      "id": "methods",
+      "name": "Methoden",
+      "description": "Skills that belong to software development, but not directly to programming",
+      "icon": "pi-compass",
+      "skills": [
+        {
+          "id": "scrum",
+          "name": "Scrum",
+          "rating": 70,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        },
+        {
+          "id": "git",
+          "name": "Git",
+          "rating": 80,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        },
+        {
+          "id": "jira",
+          "name": "Jira",
+          "rating": 70,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        }
+      ]
+    },
+    {
+      "id": "os",
+      "name": "Operating Systems",
+      "description": "The use of the operating system is an essential part of software development and also of OS-related technologies such as shell scripts and Docker",
+      "icon": "pi-desktop",
+      "skills": [
+        {
+          "id": "mac",
+          "name": "MacOS",
+          "rating": 70,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        },
+        {
+          "id": "linux",
+          "name": "Linux",
+          "rating": 60,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        },
+        {
+          "id": "windows",
+          "name": "Windows",
+          "rating": 50,
+          "text": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+        }
+      ]
+    }
+  ],
+  "TODO:remove": [
+    "Docker", "Kubernetes", "GitHub Actions", "SQL", "Swift", "SwiftUI"
+  ]
+}

@@ -6,8 +6,8 @@
     "id": "de",
     "name": "Deutsch",
     "isoAlpha2": "de",
-    "heading": "Axel Herrmann",
-    "subheading": "Software Engineer",
+    "heading": "WebCVTemplate",
+    "subheading": "Unkomplizierte CV Vorlage",
     "showMore": "Mehr anzeigen",
     "showLess": "Weniger anzeigen",
 
@@ -22,8 +22,8 @@
     "id": "en",
     "name": "English",
     "isoAlpha2": "us",
-    "heading": "Axel Herrmann",
-    "subheading": "Software Engineer",
+    "heading": "WebCVTemplate",
+    "subheading": "Easy to use CV Template",
     "showMore": "Show more",
     "showLess": "Show less",
 

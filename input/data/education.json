@@ -1,0 +1,54 @@
+{
+  "de": [
+    {
+      "heading": "Grundschule",
+      "subheading": "Grundschule Winterfell",
+      "date": "09/2002 – 07/2006",
+      "content": "Jedes dieser Felder ist frei ausfüllbar.<br> Sie können so viele Felder erstellen, wie sie wollen."
+    },
+    {
+      "heading": "Allgemeine Hochschulreife",
+      "subheading": "Gymnasium Königsmund",
+      "date": "09/2006 – 07/2014",
+      "bulletPoints": [
+        "Abschlussnote: 1,4"
+      ],
+      "content": "Außerdem können Stichpunkt-artige Inhalte hinzugefügt werden. <br>Im Kapitel Bildung könnten das z.B. Abschlussnoten oder andere erreichte Leistungen sein."
+    },
+    {
+      "heading": "Software Engineering B.Sc.",
+      "subheading": "Universität Asshai",
+      "date": "10/2014 – 09/2017",
+      "bulletPoints": [
+        "Abschlussnote: 2.0"
+      ],
+      "content": "Außerdem können Sie die Sprache mit dem Button oben rechts ändern. Sie können das Templaten mit allen Sprachen füllen, die Sie wollen. Probieren Sie es gerne aus!"
+    }
+  ],
+  "en": [
+    {
+      "heading": "Elementary School",
+      "subheading": "Elementary School Winterfell",
+      "date": "09/2002 – 07/2006",
+      "content": "Each of these fields is freely fillable.<br> You can create as many fields as you want."
+    },
+    {
+      "heading": "Abitur",
+      "subheading": "High School Kings Landing",
+      "date": "09/2006 – 07/2014",
+      "bulletPoints": [
+        "Final Grade: 1,4"
+      ],
+      "content": "Bullet-type content can also be added. <br>In the education chapter, this could be, for example, final grades or other achievements achieved."
+    },
+    {
+      "heading": "Software Engineering B.Sc.",
+      "subheading": "University Asshai",
+      "date": "10/2014 – 09/2017",
+      "bulletPoints": [
+        "Final Grade: 2.0"
+      ],
+      "content": "You can also change the language using the button at the top right. You can fill the template with all the languages you want. Feel free to try it out!"
+    }
+  ]
+}

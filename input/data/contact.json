@@ -29,7 +29,9 @@
   "de": {
     "conversationStart": [
       "Wie gefällt Ihnen diese Webseite?",
-      "Ich freue mich über jegliches Feedback und Business Anfragen."
+      "Einen realen Lebenslauf dieser Vorlage können Sie <a href=\"https://cv.axherrm.de\" target=\"_blank\">hier</a> finden.",
+      "Diese Vorlage ist Open-Source, in wenigen Schritten können Sie sie selbst verwenden!<br> Dazu einfach den Anweisungen im <a href=\"https://github.com/axherrm/WebCVTemplate\" target=\"_blank\">GitHub Repository</a> folgen.",
+      "Sie können mir Feedback und Anfragen gerne über diesen Chat schicken."
     ],
     "successMessages": [
       "Vielen Dank für Ihre Nachricht.",
@@ -47,8 +49,10 @@
   },
   "en": {
     "conversationStart": [
-      "How did you like my website?",
-      "I look forward to any feedback and business inquiries."
+      "How did you like this website?",
+      "You can find a real CV of this template <a href=\"https://cv.axherrm.de\" target=\"_blank\">here</a>.",
+      "This template is open source, you can use it yourself in just a few steps!<br> Simply follow the instructions in the <a href=\"https://github.com/axherrm/WebCVTemplate\" target=\"_blank\">GitHub repository</a>.",
+      "Feel free to send feedback and requests to me via this chat."
     ],
     "successMessages": [
       "Thank you for your message.",
