@@ -50,9 +50,8 @@ Using this template consists of 4 easy steps:
 
  1. Click `Use this template` in the top right corner of this page and create your own CV repository
  2. Clone your repo: `git clone git@github.com:username/project.git --recurse-submodules` (note that fetching the submodule is necessary for the project to work locally)
- 3. Execute setup script to make your website ready for filling in you information: `sh setup.sh`
-    - This should move a few files and add a GitHub workflow to deploy your project. 
-      The changes are automatically committed and a first deployment should be created.
+ 3. Activate GitHub Pages deployment: Under `Settings` -> `Pages` -> `Build and deployment` set `Source` to `GitHub Actions`
+    - As you probably do this after the first run of the continuous deployment workflow has ended, this will probably fail. Just rerun it after you changed this setting.
  4. Fill the template with your own information
 
 ### 1.1 Fill the template
@@ -76,7 +75,16 @@ If all languages you want to use are defined you only need to adjust the languag
 The other JSON in `input/data/` contain the user specific data.
 All languages that are configured in the previous step in `general.json` need an entry in each of these files.
 For the definition of the objects to define refer to [model.ts].
- 
+
+#### Assets
+
+Assets are mostly images that are required for the website to work. An overview of the required assets:
+
+| Asset                                 | Description                                                                                                                                                                                                                |
+|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `input/assets/avatar/*`               | This folder contains the background image in different resolutions. Providing multiple resolutions can improve performance while sustaining high quality on bigger screens. This must be configured inside background.json |
+| `input/assets/chat-avatar/avatar.png` | Low resolution avatar used in the chat box. Aspect ratio should be 1:1.                                                                                                                                                    |
+| `input/assets/CV-static.pdf`          | PDF CV which gets used as fallback for noscript devices and mobile devices.                                                                                                                                                |
 
 ## 2. Start server in development
 
