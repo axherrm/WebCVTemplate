@@ -9,20 +9,20 @@
 
   <!-- Badges -->
   <p>
-    <a href="https://github.com/axherrm/WebCVTemplate/graphs/contributors">
-      <img src="https://img.shields.io/github/contributors/axherrm/WebCVTemplate" alt="contributors" />
+    <a href="https://github.com/axherrm/WebCVTemplate-core/graphs/contributors">
+      <img src="https://img.shields.io/github/contributors/axherrm/WebCVTemplate-core" alt="contributors" />
     </a>
     <a href="">
-      <img src="https://img.shields.io/github/last-commit/axherrm/WebCVTemplate" alt="last update" />
+      <img src="https://img.shields.io/github/last-commit/axherrm/WebCVTemplate-core" alt="last update" />
     </a>
-    <a href="https://github.com/axherrm/WebCVTemplate/network/members">
-      <img src="https://img.shields.io/github/forks/axherrm/WebCVTemplate" alt="forks" />
+    <a href="https://github.com/axherrm/WebCVTemplate-core/network/members">
+      <img src="https://img.shields.io/github/forks/axherrm/WebCVTemplate-core" alt="forks" />
     </a>
     <a href="https://github.com/axherrm/WebCVTemplate/stargazers">
       <img src="https://img.shields.io/github/stars/axherrm/WebCVTemplate" alt="stars" />
     </a>
-    <a href="https://github.com/axherrm/WebCVTemplate/issues/">
-      <img src="https://img.shields.io/github/issues/axherrm/WebCVTemplate" alt="open issues" />
+    <a href="https://github.com/axherrm/WebCVTemplate-core/issues/">
+      <img src="https://img.shields.io/github/issues/axherrm/WebCVTemplate-core" alt="open issues" />
     </a>
     <a href="https://github.com/axherrm/WebCVTemplate/blob/master/LICENSE">
       <img src="https://img.shields.io/github/license/axherrm/WebCVTemplate.svg" alt="license" />
