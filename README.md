@@ -110,3 +110,8 @@ git submodule update
 
 [core]: https://github.com/axherrm/WebCVTemplate-core
 [model.ts]: core/src/app/data/model.ts
+
+## 4. Contact
+
+I really appreciate everyone using this template, so if you have any questions or problems using it, please feel free to contact me!
+You can create issues, feature ideas or contact me directly via [axherrm.business@gmail.com](mailto:axherrm.business@gmail.com).
